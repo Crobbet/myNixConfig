@@ -1,11 +1,11 @@
-cd /home/bt/nixos || exit
+cd /home/bt/myNixConfig || exit
 
 function rebuild-switch()
 {
 
   git add .
   git commit -m "Default"
-  git push origin master
+  git push origin main
 
   nixos-rebuild switch --flake /home/bt/nixos#Winter
 
