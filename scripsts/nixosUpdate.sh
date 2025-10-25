@@ -7,7 +7,7 @@ function rebuild-switch()
   git commit -m "Default"
   git push origin main
 
-  nixos-rebuild switch --flake /home/bt/nixos#Winter
+  nixos-rebuild switch --flake /home/bt/myNixConfig#Winter
 
 }
 
