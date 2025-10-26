@@ -1,14 +1,6 @@
 {pkgs, ...}:
 
 {
-
-  programs = {
-    firefox.enable = true;
-    appimage.enable = true;
-    appimage.binfmt = true;
-    steam.enable = true;
-  };
-
 	environment.systemPackages = with pkgs; [
 
     ghostty
