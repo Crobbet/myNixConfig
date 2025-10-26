@@ -96,7 +96,7 @@
     services.xserver.enable = true;
     services.xserver.desktopManager.xterm.enable = false;
     services.displayManager.sddm.enable = true;
-    services.desktopManager.cosmic.enable = true;
+    services.xserver.desktopManager.mate.enable = true;
     services.guix.enable = true;
 
     services.xserver.xkb = {
