@@ -55,7 +55,7 @@ myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
 -- Terminal
 myTerminal :: String
-myTerminal = "~/.config/xmonad/scripts/xmonad_term"
+myTerminal = "/home/bt/.xmonad/xmonad_term"
 
 myTermKitty :: String
 myTermKitty = "~/.config/xmonad/scripts/xmonad_kitty"
