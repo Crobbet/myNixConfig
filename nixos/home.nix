@@ -29,6 +29,7 @@
     ".xmonad/xmonad.hs".source = ./xmonad/xmonad.hs;
     ".xmonad/picom.conf".source = ./xmonad/picom.conf;
     ".xmonad/autorun.sh".source = ./xmonad/autorun.sh;
+    ".xmonad/xmonad_term".source = ./xmonad/xmonad_term;
   };
 
   gtk.enable = true;
