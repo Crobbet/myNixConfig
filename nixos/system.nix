@@ -35,7 +35,6 @@
     isNormalUser = true;
     description = "bt";
     extraGroups = [
-      "incus-admin"
       "networkmanager"
       "wheel"
     ];
@@ -64,21 +63,15 @@
 
   # Virtualisation
 
-  networking.nftables.enable = true;
-  networking.firewall.trustedInterfaces = [ "incusbr0" ];
-
   users.groups.libvirtd.members = ["bt"];
   virtualisation.libvirtd.enable = true;
 
-      virtualisation.containers.enable = true;
-      virtualisation = {
-        podman = {
-          enable = true;
-          dockerCompat = true;
-          defaultNetwork.settings.dns_enabled = true;
-            };
-
-         incus.enable = true;
+   virtualisation.containers.enable = true;
+   virtualisation = {
+      podman = {
+        enable = true;
+        dockerCompat = true;
+        defaultNetwork.settings.dns_enabled = true;
          };
 
   # Programs
