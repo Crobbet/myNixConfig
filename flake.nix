@@ -10,11 +10,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix.url = "github:nix-community/stylix";
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
-  outputs = { self, nixpkgs, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, nvf, ... }@inputs:
     {
      nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
@@ -27,7 +30,7 @@
         ./programs/programs.nix
 
         inputs.home-manager.nixosModules.default
-        inputs.stylix.nixosModules.stylix
+        inputs.nvf.nixosModules.default
 
         ./xmonad.nix
       ];
