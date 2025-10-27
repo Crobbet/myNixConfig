@@ -32,7 +32,14 @@
     ".xmonad/xmonad_term".source = ./xmonad/xmonad_term;
   };
 
-  gtk.enable = true;
+  gtk = {
+    enable = true;
+    cursorTheme = {
+      name      = "GoogleDot-Red";
+      package   = pkgs.google-cursor;
+      size      = 20;
+    };
+  };
 
   programs.helix = {
     enable = true;
