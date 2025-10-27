@@ -82,33 +82,13 @@
          };
 
   # Programs
-  
+
   programs = {
     virt-manager.enable = true;
     firefox.enable = true;
     appimage.enable = true;
     appimage.binfmt = true;
     steam.enable = true;
-    nvf = { 
-    enable = true;
-         settings = {
-         vim = {
-       theme = {
-                enable = true;
-                name = "catppuccin";
-                style = "mocha";
-                transparent = true;
-                };
- 
-         };
-       vim.viAlias = false;
-        vim.vimAlias = true;
-        vim.lsp = {
-            enable = true;
-        }; 
-        vim.languages.nix.enable = true;
-      };
-    };
   };
 
   # Services
