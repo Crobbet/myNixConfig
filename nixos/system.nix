@@ -96,6 +96,7 @@
         vim.vimAlias = true;
         vim.lsp = {
             enable = true;
+            nix.enable = true;
          }; 
       };
     };
