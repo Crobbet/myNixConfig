@@ -91,14 +91,15 @@
     steam.enable = true;
     nvf = { 
     enable = true;
-        theme = {
+         settings = {
+       theme = {
                 enable = true;
                 name = "catppuccin";
                 style = "mocha";
                 transparent = true;
                 };
 
-        settings = {
+
         vim.viAlias = false;
         vim.vimAlias = true;
         vim.lsp = {
