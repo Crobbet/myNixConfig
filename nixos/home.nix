@@ -54,6 +54,11 @@
   programs.ghostty = {
     enable = true;
     settings = {
+        background-opacity = "0.8";
+        unfocused-split-opacity = "0.2";
+        window-decoration = "none";
+        window-padding-x = "10, 10";
+        window-padding-y = "10, 10";
         font-size = 12;
         keybind = [
           "ctrl+h=goto_split:left"
