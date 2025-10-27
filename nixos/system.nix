@@ -92,15 +92,16 @@
     nvf = { 
     enable = true;
          settings = {
+         vim = {
        theme = {
                 enable = true;
                 name = "catppuccin";
                 style = "mocha";
                 transparent = true;
                 };
-
-
-        vim.viAlias = false;
+ 
+         };
+       vim.viAlias = false;
         vim.vimAlias = true;
         vim.lsp = {
             enable = true;
