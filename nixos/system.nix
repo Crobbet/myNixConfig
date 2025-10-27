@@ -98,6 +98,7 @@
             enable = true;
          }; 
       };
+    };
   };
 
   # Services
