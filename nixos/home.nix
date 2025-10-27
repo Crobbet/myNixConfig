@@ -51,6 +51,18 @@
     };
   };
 
+  programs.ghostty = {
+    enable = true;
+    settings = {
+        theme = "catppuccin-mocha";
+        font-size = 12;
+        keybind = [
+          "ctrl+h=goto_split:left"
+          "ctrl+l=goto_split:right"
+        ];
+      };
+  };
+
   home.sessionVariables = {
     EDITOR = "hx";
   };
