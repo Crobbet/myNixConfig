@@ -36,6 +36,7 @@
 
   programs.helix = {
     enable = true;
+    settings = {
     theme = "base16";
     editor = {
       line-number = "relative";
@@ -47,6 +48,7 @@
       space.q = ":q";
       esc = [ "collapse_selection" "keep_primary_selection" ];
       };
+    };
   };
 
   home.sessionVariables = {
