@@ -42,7 +42,10 @@
   };
 
   programs.nushell = {
-    enable = true;
+    enable                = true;
+    environmentVariables  = {
+        PS1 = " ~ ";
+    };
   };
 
   programs.helix = {
