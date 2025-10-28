@@ -10,13 +10,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvf = {
-      url = "github:notashelf/nvf";
-    };
-
   };
 
-  outputs = { self, nixpkgs, nvf, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@inputs:
     {
      nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
@@ -26,26 +22,8 @@
 #        /etc/nixos/hardware-configuration.nix
         ./programs/programs.nix
 
-        inputs.home-manager.nixosModules.default
-
         ./xmonad.nix
-
-        ({config, pkgs, ...}:
-          {
-            environment.systemPackages = with pkgs; [
-              (nvf.lib.neovimConfiguration {
-                pkgs = pkgs;
-                modules = [
-                  {
-                    config.vim = {
-                      theme.enable = true;
-                      treesitter.enable = true;
-                    };
-                  }
-                ];
-              })
-            ];
-          })
+        inputs.home-manager.nixosModules.default
       ];
     };
   };
