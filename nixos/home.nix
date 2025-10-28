@@ -91,6 +91,7 @@ programs = {
         add_newline = false;
         format = lib.concatStrings [
           "$package"
+          "$line_break"
           "$character"
         ];
         scan_timeout = 10;
