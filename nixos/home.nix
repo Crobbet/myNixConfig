@@ -52,8 +52,14 @@
       history              = {
           format = "sqlite";
       };
-
     }; 
+    plugins               = with pkgs.nushellPlugins; [
+      formats
+      highlight
+      gstat
+      query
+      skim
+    ];
     environmentVariables  = {
         env.PS1   = "[ Λ \[\033[38;5;81m\]\W\[\033[0m\]] \n\[\033[1;38;5;81m\]$\[\033[0m\]";
     };
