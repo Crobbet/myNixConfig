@@ -45,9 +45,6 @@ programs.hyfetch = {
   enable = true;
   preset = "asexual";
     mode = "rgb";
-    color_align = {
-      mode = "horizontal";
-    };
   };
 
 programs = {
