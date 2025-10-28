@@ -43,7 +43,7 @@
         inputs.home-manager.nixosModules.default
 
         ({pkgs, ...}: {
-            environment.systemPackages = [self.packages.${pkgs.stdenv.system}.neovim];
+            environment.systemPackages = [self.packages.${pkgs.stdenv.system}.my-neovim];
           })
 
       ];
