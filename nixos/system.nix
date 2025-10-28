@@ -89,8 +89,7 @@
     services.xserver.enable = true;
     services.xserver.desktopManager.xterm.enable = false;
     services.displayManager.sddm.enable = true;
-    services.xserver.desktopManager.mate.enable = true;
-    services.xserver.windowManager.i3.enable = true;
+    services.xserver.desktopManager.lxqt.enable = true;
     services.guix.enable = true;
 
     services.xserver.xkb = {
