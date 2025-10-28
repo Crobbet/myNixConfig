@@ -44,6 +44,7 @@
 programs.hyfetch = {
   enable = true;
   settings = {
+    backend = "fastfetch";
     preset = "rainbow";
     mode = "rgb";
     color_align = {
