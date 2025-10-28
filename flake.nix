@@ -24,7 +24,6 @@
             {pkgs, ...}: {
              config.vim = {
                 tabstop = 2;
-                shiftwidth = 4;
                 viAlias = true;
                 vimAlias = true;
                 debugMode = {
