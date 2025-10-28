@@ -42,12 +42,16 @@
   };
 
   programs.nushell = {
-    enable                = true;
-    settings              = {
-      show_banner = false;
+    enable                 = true;
+    settings               = {
+      show_banner          = false;
+      completions.external = {
+          enable      = true;
+          max_results = 200;
+        };
     }; 
     environmentVariables  = {
-        env.PS1 = "[ Λ \[\033[38;5;81m\]\W\[\033[0m\]] \n\[\033[1;38;5;81m\]$\[\033[0m\]";
+        env.PS1   = "[ Λ \[\033[38;5;81m\]\W\[\033[0m\]] \n\[\033[1;38;5;81m\]$\[\033[0m\]";
     };
   };
 
