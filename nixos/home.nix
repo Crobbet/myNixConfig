@@ -43,9 +43,14 @@
 
 programs.hyfetch = {
   enable = true;
-  preset = "asexual";
+  settings = {
+    preset = "rainbow";
     mode = "rgb";
+    color_align = {
+      mode = "horizontal";
+    };
   };
+};
 
 programs = {
     nushell = {
