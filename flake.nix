@@ -9,9 +9,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nvf = {
+      url = "github:notashelf/nvf";
+    };
+
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs, nvf, ... }@inputs:
     {
      nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
@@ -24,6 +29,23 @@
         inputs.home-manager.nixosModules.default
 
         ./xmonad.nix
+
+        ({config, pkgs, ...}:
+          {
+            enviroment.systemPackages = with pkgs; [
+              (nvf.lib.neovimConfiguration {
+                pkgs = pkgs;
+                modules = [
+                  {
+                    config.vim = {
+                      theme.enable = true;
+                      treesitter.enable = true;
+                    };
+                  }
+                ];
+              })
+            ];
+          }).neovim
       ];
     };
   };
