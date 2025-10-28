@@ -141,6 +141,7 @@ programs = {
   programs.ghostty = {
     enable = true;
     settings = {
+        command = "nu";
         background-opacity = "0.8";
         unfocused-split-opacity = "0.2";
         window-decoration = "none";
