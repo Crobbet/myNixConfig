@@ -32,9 +32,10 @@
 
         ({config, pkgs, ...}:
           {
-            enviroment.systemPackages = with pkgs; [
+            environment.systemPackages = with pkgs; [
               (nvf.lib.neovimConfiguration {
                 pkgs = pkgs;
+                config = config;
                 modules = [
                   {
                     config.vim = {
