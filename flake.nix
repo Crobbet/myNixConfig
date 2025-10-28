@@ -24,9 +24,15 @@
             {pkgs, ...}: {
              config.vim = {
                 theme.enable = true;
-              };
-            }
-          )
+                viAlias = true;
+                vimAlias = true;
+                debugMode = {
+                  enable = false;
+                  level = 16;
+                  logFile = "/tmp/nvim.log";
+                };
+             };
+          })
         ];
       })
       .neovim;
