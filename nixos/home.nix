@@ -41,6 +41,10 @@
     };
   };
 
+  programs.nushell = {
+    enable = true;
+  };
+
   programs.helix = {
     enable = true;
     settings = {
