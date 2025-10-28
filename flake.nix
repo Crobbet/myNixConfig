@@ -31,6 +31,34 @@
                   level = 16;
                   logFile = "/tmp/nvim.log";
                 };
+                spellcheck = {
+                  enable = true;
+                };
+
+                lsp = {
+                  enable = true;
+
+                  formatOnSave = true;
+                  lspkind.enable = false;
+                  lightbulb.enable = true;
+                  lspsaga.enable = false;
+                  trouble.enable = true;
+               };
+
+              debugger = {
+                nvim-dap = {
+                  enable = true;
+                  ui.enable = true;
+                };
+              };
+
+             languages = {
+               enableFormat = true;
+               enableTreesitter = true;
+               enableExtraDiagnostics = true;
+               nix.enable = true;
+               markdown.enable = true;
+               };
              };
           })
         ];
