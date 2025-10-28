@@ -202,6 +202,22 @@
             };
             fastaction.enable = true;
               };
+            
+            session = {
+            nvim-session-manager.enable = true;
+            };
+
+            gestures = {
+              gesture-nvim.enable = true;
+            };
+
+            comments = {
+              comment-nvim.enable = true;
+              };
+
+            presence = {
+              neocord.enable = false;
+              };
              };
           })
         ];
