@@ -123,6 +123,35 @@
               };
 
               telescope.enable = true;
+              
+              git = {
+                enable = true;
+                gitsigns.enable = true;
+                gitsigns.codeActions.enable = false;
+                neogit.enable = true;
+              };
+             minimap = {
+               minimap-vim.enable = false;
+               codewindow.enable = true;
+              };
+
+             
+             notify = {
+               nvim-notify.enable = true;
+              };
+             
+             projects = {
+               project-nvim.enable = true;
+              };
+
+              let
+                isMaxmal = true;
+              in
+                {
+                utility = {
+                  ccc.enable = false;
+                };
+              };
 
              };
           })
