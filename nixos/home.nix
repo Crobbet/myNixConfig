@@ -44,7 +44,7 @@
   programs.nushell = {
     enable                = true;
     environmentVariables  = {
-        PS1 = " ~ ";
+        PS1 = " ABC ";
     };
   };
 
