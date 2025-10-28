@@ -58,7 +58,33 @@
                enableExtraDiagnostics = true;
                nix.enable = true;
                markdown.enable = true;
+               bash.enable = true;
+               clang.enable = true;
+               css.enable = true;
+               html.enable = true;
+               lua.enable = true;
+               zig.enable = true;
+               python.enable = true;
+               assembly.enable = true;
+               nu.enable = true;
+               julia.enable = true;
+               gleam.enable = true;
+               haskell.enable = true;
+               fsharp.enable = false;
+               nim.enable = false;
                };
+                visuals = {
+                  nvim-scrollbar.enable = true;
+                  nvim-web-devicons.enable = true;
+                  nvim-cursorline.enable = true;
+                  cinnamon-nvim.enable = true;
+                  fidget-nvim.enable = true;
+
+                 highlight-undo.enable = true;
+                 indent-blankline.enable = true;
+                 cellular-automaton.enable = false;
+                };
+
              };
           })
         ];
