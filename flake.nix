@@ -23,7 +23,6 @@
         (
             {pkgs, ...}: {
              config.vim = {
-                theme.enable = true;
                 viAlias = true;
                 vimAlias = true;
                 debugMode = {
@@ -43,36 +42,36 @@
                   lightbulb.enable = true;
                   lspsaga.enable = false;
                   trouble.enable = true;
-               };
-
-              debugger = {
-                nvim-dap = {
-                  enable = true;
-                  ui.enable = true;
                 };
-              };
 
-             languages = {
-               enableFormat = true;
-               enableTreesitter = true;
-               enableExtraDiagnostics = true;
-               nix.enable = true;
-               markdown.enable = true;
-               bash.enable = true;
-               clang.enable = true;
-               css.enable = true;
-               html.enable = true;
-               lua.enable = true;
-               zig.enable = true;
-               python.enable = true;
-               assembly.enable = true;
-               nu.enable = true;
-               julia.enable = true;
-               gleam.enable = true;
-               haskell.enable = true;
-               fsharp.enable = false;
-               nim.enable = false;
-               };
+                debugger = {
+                  nvim-dap = {
+                    enable = true;
+                    ui.enable = true;
+                  };
+                };
+
+               languages = {
+                 enableFormat = true;
+                 enableTreesitter = true;
+                 enableExtraDiagnostics = true;
+                 nix.enable = true;
+                 markdown.enable = true;
+                 bash.enable = true;
+                 clang.enable = true;
+                 css.enable = true;
+                 html.enable = true;
+                 lua.enable = true;
+                 zig.enable = true;
+                 python.enable = true;
+                 assembly.enable = true;
+                 nu.enable = true;
+                 julia.enable = true;
+                 gleam.enable = true;
+                 haskell.enable = true;
+                 fsharp.enable = true;
+                 nim.enable = true;
+                 };
                 visuals = {
                   nvim-scrollbar.enable = true;
                   nvim-web-devicons.enable = true;
@@ -84,6 +83,26 @@
                  indent-blankline.enable = true;
                  cellular-automaton.enable = false;
                 };
+
+                statusline = {
+                  lualine = {
+                    enable = true;
+                    theme = "catppuccin";
+                  };
+                };
+
+               theme = {
+                 enable = true;
+                 name = "catppuccin";
+                 style = "mocha";
+                 transparent = true;
+                };
+
+              autopairs.nvim-autopairs.enable = true;
+              autocomplete = {
+                    nvim-cmp.enable = false;
+                    blink-cmp.enable = true;
+              };
 
              };
           })
