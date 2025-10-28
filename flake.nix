@@ -104,6 +104,26 @@
                     blink-cmp.enable = true;
               };
 
+              snippets.luasnip.enable = true;
+              filetree = {
+                neo-tree = {
+                  enable = true;
+                };
+              };
+
+              tabline = {
+                nvimBufferline.enable = true;
+              };
+
+              treesitter.context.enable = true;
+
+              binds = {
+                whichKey.enable = true;
+                cheatsheet.enable = true;
+              };
+
+              telescope.enable = true;
+
              };
           })
         ];
