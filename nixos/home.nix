@@ -55,7 +55,7 @@ programs = {
   skim.enable = true;
   nh = {
       enable = true;
-      flake = /home/bt/myNixConfig;
+      osFlake = /home/bt/myNixConfig;
       };
 };
 programs.hyfetch = {
