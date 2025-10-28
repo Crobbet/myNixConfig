@@ -41,6 +41,23 @@
     };
   };
 
+programs = {
+  eza = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
+
+  zoxide = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
+
+  skim.enable = true;
+  nh = {
+      enable = true;
+      flake = /home/bt/myNixConfig;
+      };
+};
 programs.hyfetch = {
   enable = true;
   settings = {
