@@ -90,6 +90,7 @@ programs = {
      settings = {
         add_newline = false;
         format = lib.concatStrings [
+          "$all"
           "$package"
           "$line_break"
           "$character"
