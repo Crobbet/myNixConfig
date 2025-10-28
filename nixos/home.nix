@@ -44,7 +44,7 @@
   programs.nushell = {
     enable                = true;
     settings              = {
-      show_banner = true;
+      show_banner = false;
     }; 
     environmentVariables  = {
         env.PS1 = "[ Λ \[\033[38;5;81m\]\W\[\033[0m\]] \n\[\033[1;38;5;81m\]$\[\033[0m\]";
