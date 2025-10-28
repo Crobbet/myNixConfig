@@ -23,6 +23,9 @@
         (
             {pkgs, ...}: {
              config.vim = {
+                tabstop = 2;
+                shiftwidth = 4;
+                expandtab = true;
                 viAlias = true;
                 vimAlias = true;
                 debugMode = {
