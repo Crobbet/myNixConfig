@@ -44,7 +44,7 @@
 programs.hyfetch = {
   enable = true;
   settings = {
-    pride_month_disable = "true";
+    pride_month_disable = true;
     backend = "fastfetch";
     preset = "rainbow";
     mode = "rgb";
