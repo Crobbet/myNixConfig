@@ -114,7 +114,7 @@
 
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "${pkgs.coreutils}/bin/sh -c 'echo 1 > /sys/bus/usb/devices/1-0:1.0/usb1-port4/disable'";
+      ExecStart = "${pkgs.bash}/bin/bash -c 'echo 1 > /sys/bus/usb/devices/1-0:1.0/usb1-port4/disable'";
     };
   };
 }
