@@ -90,7 +90,7 @@
   services.xserver.enable = true;
   services.xserver.desktopManager.xterm.enable = false;
   services.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.lxqt.enable = true;
+  services.desktopManager.gnome = true;
   services.guix.enable = true;
 
   services.xserver.xkb = {
