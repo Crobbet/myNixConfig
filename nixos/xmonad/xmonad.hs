@@ -42,7 +42,7 @@ myClickJustFocuses = False
 myBorderWidth = 2
 
 -- Border colors for focused & unfocused windows
-myFocusedBorderColor = "#5D3FD3"
+myFocusedBorderColor = "#0000FF"
 myNormalBorderColor = "#272E33"
 
 -- ** ************************* ** --
