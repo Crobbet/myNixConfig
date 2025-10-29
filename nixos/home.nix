@@ -153,7 +153,7 @@
     enable = true;
     settings = {
       command = "nu";
-      background-opacity = "0.5";
+      background-opacity = "0.7";
       unfocused-split-opacity = "0.2";
       window-decoration = "none";
       window-padding-x = "10, 10";
