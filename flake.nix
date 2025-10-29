@@ -94,7 +94,7 @@
 
                 statusline = {
                   lualine = {
-                    enable = false;
+                    enable = true;
                     theme = "catppuccin";
                   };
                 };
@@ -157,7 +157,7 @@
                   yanky-nvim.enable = false;
                   icon-picker.enable = true;
                   surround.enable = true;
-                  leetcode-nvim.enable = true;
+                  leetcode-nvim.enable = false;
                   multicursors.enable = true;
                   smart-splits.enable = true;
                   undotree.enable = true;
