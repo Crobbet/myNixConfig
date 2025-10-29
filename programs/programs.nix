@@ -1,58 +1,55 @@
-{pkgs, ...}:
-
-{
-	environment.systemPackages = with pkgs; [
-
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
     ghostty
-	  
-	  usbutils
-	  uhubctl
+
+    usbutils
+    uhubctl
+    coreutils-full
 
     clang
     lldb
-	  
-	  localsend
 
- 	  sakura
-	  alacritty
-	  
-		kiwix
-	
-		efibootmgr
+    localsend
 
-		kdePackages.filelight
-		komikku
-	
-		torrential
-		unzip
-		zip
-		appimage-run
-		media-downloader
-	
-		notesnook
-		obsidian
-		logseq
+    sakura
+    alacritty
 
-		heroic
+    kiwix
 
-		ppsspp
-		mgba
-		pcsx2
-	
-		podman-compose
-		distrobox
-		boxbuddy
+    efibootmgr
 
-		wget
-		git
-		helix
-		love
-		lua
-		lua-language-server
+    kdePackages.filelight
+    komikku
 
-		nixd
+    torrential
+    unzip
+    zip
+    appimage-run
+    media-downloader
 
-		brave
-	];
+    notesnook
+    obsidian
+    logseq
 
+    heroic
+
+    ppsspp
+    mgba
+    pcsx2
+
+    podman-compose
+    distrobox
+    boxbuddy
+
+    wget
+    git
+    helix
+    love
+    lua
+    lua-language-server
+
+    nixd
+
+    brave
+  ];
 }
