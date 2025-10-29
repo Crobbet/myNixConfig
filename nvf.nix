@@ -2,7 +2,7 @@
   utility.yazi-nvim.enable = true;
   options = {
     tabstop = 2;
-    shiftwidth = 4;
+    shiftwidth = 2;
     expandtab = true;
   };
   viAlias = true;
