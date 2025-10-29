@@ -1,10 +1,13 @@
-{ config, pkgs, inputs, lib, ... }:
-
 {
-  imports =
-    [
-      inputs.home-manager.nixosModules.default
-    ];
+  config,
+  pkgs,
+  inputs,
+  lib,
+  ...
+}: {
+  imports = [
+    inputs.home-manager.nixosModules.default
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -14,7 +17,6 @@
 
   networking.hostName = "Winter";
   networking.networkmanager.enable = true;
-
 
   time.timeZone = "Asia/Dhaka";
 
@@ -48,32 +50,31 @@
   system.stateVersion = "25.11";
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     users = {
       "bt" = import ./home.nix;
     };
   };
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   specialisation.zen.configuration = {
     boot.kernelPackages = lib.mkForce pkgs.linuxPackages_zen;
   };
-
 
   # Virtualisation
 
   users.groups.libvirtd.members = ["bt"];
   virtualisation.libvirtd.enable = true;
 
-   virtualisation.containers.enable = true;
-   virtualisation = {
-      podman = {
-        enable = true;
-        dockerCompat = true;
-        defaultNetwork.settings.dns_enabled = true;
-         };
+  virtualisation.containers.enable = true;
+  virtualisation = {
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
     };
+  };
 
   # Programs
 
@@ -86,27 +87,34 @@
   };
 
   # Services
-    services.xserver.enable = true;
-    services.xserver.desktopManager.xterm.enable = false;
-    services.displayManager.sddm.enable = true;
-    services.xserver.desktopManager.lxqt.enable = true;
-    services.guix.enable = true;
+  services.xserver.enable = true;
+  services.xserver.desktopManager.xterm.enable = false;
+  services.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.lxqt.enable = true;
+  services.guix.enable = true;
 
-    services.xserver.xkb = {
-      layout = "us";
-      variant = "";
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
+
+  services.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+
+  systemd.services.disableFaultyUsbPort = {
+    description = "Disable faulty USB port at boot";
+    wantedBy = ["multi-user.target"];
+    after = ["sysinit.target" "local-fs.target"];
+
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.coreutils}/bin/sh -c 'echo 1 > /sys/bus/usb/devices/1-0:1.0/usb1-port4/disable'";
     };
-
-    services.pulseaudio.enable = false;
-    security.rtkit.enable = true;
-    services.pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-    };
-
-    boot.initrd.services.udev.rules =''
-      ACTION=="add", SUBSYSTEM=="usb", KERNEL=="1-4", ATTR{authorized}="0"
-    '';
+  };
 }
