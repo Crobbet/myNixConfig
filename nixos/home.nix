@@ -85,6 +85,9 @@
   programs = {
     nushell = {
       enable = true;
+      environmentVariables = {
+        GUIX_PROFILE = "/home/bt/.config/guix/current";
+      };
       extraConfig = ''
         let carapace_completer = {|spans|
         carapace $spans.0 nushell ...$spans | from json
@@ -152,7 +155,7 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      command = "nu";
+      command = ''nu & . "$GUIX_PROFILE/etc/profile"'';
       background-opacity = "0.7";
       unfocused-split-opacity = "0.2";
       window-decoration = "none";
