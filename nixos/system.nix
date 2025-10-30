@@ -146,6 +146,7 @@
       };
     };
     windowManager = {
+      i3.enable = true;
       xmonad = {
         enable = true;
         enableContribAndExtras = true;
