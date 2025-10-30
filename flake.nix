@@ -38,10 +38,7 @@
         ./nixos/hardware-configuration.nix
         #        /etc/nixos/hardware-configuration.nix
         ./programs/programs.nix
-
-        ./xmonad.nix
         inputs.home-manager.nixosModules.default
-
         ({pkgs, ...}: {
           environment.systemPackages = [self.packages.${pkgs.stdenv.system}.my-neovim];
         })
