@@ -12,6 +12,7 @@
 
     nerd-fonts.jetbrains-mono
     nerd-fonts.zed-mono
+    nerd-fonts.dejavu-sans-mono
 
     bash-language-server
 
