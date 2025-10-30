@@ -155,7 +155,7 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      command = ''nu & . "$GUIX_PROFILE/etc/profile"'';
+      command = "nu";
       background-opacity = "0.7";
       unfocused-split-opacity = "0.2";
       window-decoration = "none";
