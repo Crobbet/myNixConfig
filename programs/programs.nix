@@ -1,5 +1,8 @@
 {pkgs, ...}: {
+
   environment.systemPackages = with pkgs; [
+    genymotion
+
     yazi
 
     ghostty
