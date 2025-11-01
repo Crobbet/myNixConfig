@@ -75,7 +75,7 @@
 
   theme = {
     enable = true;
-    name = "OceanicNext";
+    name = "onedark";
     #style = "dark";
     transparent = true;
   };
