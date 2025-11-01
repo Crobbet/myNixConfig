@@ -76,7 +76,7 @@
   theme = {
     enable = true;
     name = "catppuccin";
-    style = "dark";
+    style = "macchiato";
     transparent = true;
   };
 
