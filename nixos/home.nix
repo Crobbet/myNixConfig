@@ -139,7 +139,6 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "ttox";
       editor = {
         line-number = "relative";
         lsp.display-messages = true;
