@@ -43,7 +43,7 @@
       specialArgs = {inherit inputs;};
       modules = [
 
-        inputs.stylix.nixosModules.stylix
+        stylix.nixosModules.stylix
 
         ({pkgs, ...}:
         {
