@@ -40,7 +40,7 @@
     nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        stylix.nixosModules.stylix
+        inputs.stylix.nixosModules.stylix
 
         ./nixos/system.nix
         ./nixos/hardware-configuration.nix
