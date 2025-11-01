@@ -14,7 +14,7 @@
       url = "github:einetuer/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
- 
+
     nvf.url = "github:notashelf/nvf";
   };
 
@@ -43,13 +43,14 @@
       specialArgs = {inherit inputs;};
       modules = [
         stylix.nixosModules.stylix
-({pkgs, ...}:
-{
-  stylix = {
-    enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    };
-})
+        ({pkgs, ...}: {
+          stylix = {
+            enable = true;
+            #    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+            image = ./nixos/wallpaper.png;
+            stylix.polarity = "dark";
+          };
+        })
         ./nixos/system.nix
         ./nixos/hardware-configuration.nix
         #        /etc/nixos/hardware-configuration.nix
