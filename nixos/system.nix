@@ -161,7 +161,6 @@
 
   stylix = {
     enable = true;
-    image = ./wallpaper.png;
-    polarity = "dark";
+    stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/g.yaml";
   };
 }
