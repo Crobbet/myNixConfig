@@ -10,9 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-colors.url = "github:misterio77/nix-colors";
-
-
+    stylix = {
+      url = "github:danth/stylix-fork";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+ 
     nvf.url = "github:notashelf/nvf";
   };
 
@@ -21,7 +23,7 @@
     nixpkgs,
     nixpkgsStable,
     nvf,
-    nix-colors,
+    stylix,
     ...
   } @ inputs: {
     packages.x86_64-linux.my-neovim =
@@ -40,7 +42,14 @@
     nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-
+        stylix.nixosModules.stylix
+({pkgs, ...}:
+{
+  stylix = {
+    enable = true;
+    stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    };
+})
         ./nixos/system.nix
         ./nixos/hardware-configuration.nix
         #        /etc/nixos/hardware-configuration.nix
