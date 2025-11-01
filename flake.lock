@@ -178,7 +178,7 @@
     "home-manager": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs"
+          "nixpkgsStable"
         ]
       },
       "locked": {
@@ -324,7 +324,7 @@
         "flake-parts": "flake-parts_2",
         "gnome-shell": "gnome-shell",
         "nixpkgs": [
-          "nixpkgs"
+          "nixpkgsStable"
         ],
         "nur": "nur",
         "systems": "systems_2",

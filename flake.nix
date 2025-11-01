@@ -42,7 +42,16 @@
     nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
+
         inputs.stylix.nixosModules.stylix
+
+        ({pkgs, ...}:
+        {
+          stylix = {
+            enable = true;
+            base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+            };
+          })
 
         ./nixos/system.nix
         ./nixos/hardware-configuration.nix
