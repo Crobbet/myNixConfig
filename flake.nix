@@ -11,7 +11,7 @@
     };
 
     stylix = {
-      url = "github:danth/stylix-fork";
+      url = "github:einetuer/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
  
