@@ -7,12 +7,12 @@
 
     home-manager = {
       url = "github:nix-community/home-manager";
-      follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     stylix = {
       url = "github:nix-community/stylix";
-      follows = "nixpkgs";
+#      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nvf.url = "github:notashelf/nvf";
@@ -46,7 +46,7 @@
         ({pkgs, ...}:
         {
           stylix = {
-            enable = true;
+            enable = false;
             base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
             };
           })
@@ -55,7 +55,7 @@
         ./nixos/hardware-configuration.nix
         #        /etc/nixos/hardware-configuration.nix
         ./programs/programs.nix
- #       inputs.home-manager.nixosModules.default
+        inputs.home-manager.nixosModules.default
         ({pkgs, ...}: {
           environment.systemPackages = [self.packages.${pkgs.stdenv.system}.my-neovim];
         })
