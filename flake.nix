@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nvf.url = "github:notashelf/nvf";
   };
 
@@ -16,6 +21,7 @@
     self,
     nixpkgs,
     nvf,
+    stylix,
     ...
   } @ inputs: {
     packages.x86_64-linux.my-neovim =
@@ -34,6 +40,8 @@
     nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
+        stylix.nixosModules.stylix
+
         ./nixos/system.nix
         ./nixos/hardware-configuration.nix
         #        /etc/nixos/hardware-configuration.nix
