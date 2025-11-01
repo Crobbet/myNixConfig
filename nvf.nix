@@ -69,13 +69,13 @@
   statusline = {
     lualine = {
       enable = true;
-      theme = "OceanicNext";
+      theme = "nord";
     };
   };
 
   theme = {
     enable = true;
-    name = "onedark";
+    name = "nord";
     #style = "dark";
     transparent = true;
   };
