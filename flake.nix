@@ -48,7 +48,7 @@
             enable = true;
             #    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
             image = ./nixos/wallpaper.png;
-            polarity = "light";
+            polarity = "dark";
           };
         })
         ./nixos/system.nix
