@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    inputs.home-manager.nixosModules.default
+#    inputs.home-manager.nixosModules.default
   ];
 
   boot.loader.systemd-boot.enable = true;
