@@ -10,7 +10,7 @@
     };
 
     stylix = {
-      url = "github:danth/stylix";
+      url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -40,7 +40,7 @@
     nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        stylix.homeManagerModules.stylix
+        inputs.stylix.nixosModules.stylix
 
         ./nixos/system.nix
         ./nixos/hardware-configuration.nix
