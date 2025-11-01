@@ -89,8 +89,8 @@
   # Services
   services.xserver.enable = true;
   services.xserver.desktopManager.xterm.enable = false;
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.displayManager.ly.enable = true;
+  services.xserver.desktopManager.cinnamon.enable = true;
   services.guix.enable = true;
 
   services.xserver.xkb = {
