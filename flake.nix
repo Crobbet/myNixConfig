@@ -10,10 +10,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:nix-community/stylix";
-#      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nix-colors.url = "github:misterio77/nix-colors";
+
 
     nvf.url = "github:notashelf/nvf";
   };
@@ -23,7 +21,7 @@
     nixpkgs,
     nixpkgsStable,
     nvf,
-    stylix,
+    nix-colors,
     ...
   } @ inputs: {
     packages.x86_64-linux.my-neovim =
@@ -42,14 +40,6 @@
     nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-
-        ({pkgs, ...}:
-        {
-          stylix = {
-            enable = false;
-            base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-            };
-          })
 
         ./nixos/system.nix
         ./nixos/hardware-configuration.nix
