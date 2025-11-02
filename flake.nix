@@ -49,6 +49,26 @@
             #    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
             image = ./nixos/wallpaper.png;
             polarity = "dark";
+            fonts = {
+              serif = {
+              package = pkgs.comic-mono;
+              name = "DejaVu Serif";
+              };
+
+             sansSerif = {
+               package = pkgs.comic-mono;
+               name = "DejaVu Sans";
+               };
+
+              monospace = {
+                package = pkgs.nerd-fonts.c;
+                name = "DejaVu Sans Mono";
+              };
+
+             emoji = {
+               package = pkgs.noto-fonts-color-emoji;
+               name = "Noto Color Emoji";
+              };
           };
         })
         ./nixos/system.nix
