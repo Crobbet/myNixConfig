@@ -52,17 +52,17 @@
             fonts = {
               serif = {
               package = pkgs.comic-mono;
-              name = "DejaVu Serif";
+              name = "Comic Sans";
               };
 
              sansSerif = {
                package = pkgs.comic-mono;
-               name = "DejaVu Sans";
+               name = "Comic";
                };
 
               monospace = {
-                package = pkgs.nerd-fonts.c;
-                name = "DejaVu Sans Mono";
+                package = pkgs.nerd-fonts.comic-shanns-mono;
+                name = "ComicShans";
               };
 
              emoji = {
