@@ -148,9 +148,9 @@
     };
   };
   notes = {
-    obsidian.enable = true;
+    obsidian.enable = false;
     neorg.enable = true;
-    orgmode.enable = true;
+    orgmode.enable = false;
     mind-nvim.enable = true;
     todo-comments.enable = true;
   };
