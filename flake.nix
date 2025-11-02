@@ -69,6 +69,7 @@
                package = pkgs.noto-fonts-color-emoji;
                name = "Noto Color Emoji";
               };
+              };
           };
         })
         ./nixos/system.nix
