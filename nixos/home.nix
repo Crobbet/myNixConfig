@@ -8,6 +8,8 @@
   home.homeDirectory = "/home/bt";
   home.stateVersion = "25.11";
   home.packages = with pkgs; [
+    whitesur-icon-theme
+    
     ente-desktop
 
     nerd-fonts.jetbrains-mono
@@ -16,9 +18,8 @@
 
     bash-language-server
 
-    libreoffice-fresh-unwrapped
-
     gruvbox-plus-icons
+
     google-cursor
     everforest-gtk-theme
 
@@ -33,6 +34,14 @@
     ".xmonad/picom.conf".source = ./xmonad/picom.conf;
     ".xmonad/autorun.sh".source = ./xmonad/autorun.sh;
     ".xmonad/xmonad_term".source = ./xmonad/xmonad_term;
+  };
+
+  xdg = {
+    enable = true;
+    mimeApps.enable = true;
+    iconTheme = {
+      name = "WhiteSur";
+    };
   };
 
   gtk = {
