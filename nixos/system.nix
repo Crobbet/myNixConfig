@@ -89,7 +89,7 @@
   # Services
   services.xserver.enable = true;
   services.xserver.desktopManager.xterm.enable = false;
-  services.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.budgie.enable = true;
   services.guix.enable = true;
 
