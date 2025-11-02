@@ -9,7 +9,7 @@
   home.stateVersion = "25.11";
   home.packages = with pkgs; [
     whitesur-icon-theme
-    
+
     ente-desktop
 
     nerd-fonts.jetbrains-mono
@@ -36,11 +36,12 @@
     ".xmonad/xmonad_term".source = ./xmonad/xmonad_term;
   };
 
-  xdg = {
+  services.xsettingsd = {
     enable = true;
-    mimeApps.enable = true;
-    iconTheme = {
-      name = "WhiteSur";
+    settings = {
+      "Net/IconThemeName" = "WhiteSur";
+      "Xcursor/theme" = "GoogleDot-Red";
+      "Xcursor/size" = "24";
     };
   };
 
