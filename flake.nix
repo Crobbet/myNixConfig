@@ -47,7 +47,7 @@
           stylix = {
             enable = true;
             #    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-            image = ./nixos/1379491.png;
+            image = ./nixos/wallpaper.png;
             polarity = "dark";
           };
         })

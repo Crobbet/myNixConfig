@@ -89,8 +89,8 @@
   # Services
   services.xserver.enable = true;
   services.xserver.desktopManager.xterm.enable = false;
-  services.displayManager.ly.enable = true;
-  services.xserver.desktopManager.cinnamon.enable = true;
+  services.displayManager.lightdm.enable = true;
+  services.xserver.desktopManager.budgie.enable = true;
   services.guix.enable = true;
 
   services.xserver.xkb = {
@@ -158,5 +158,4 @@
       };
     };
   };
-
 }
