@@ -63,7 +63,7 @@ myTermKitty = "~/.config/xmonad/scripts/xmonad_kitty"
 -- ## Key Bindings ## -------------------------------------------------------------------
 myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
 
-    -- Launch terminal : alacritty
+
     [ ((super,                      xK_Return),  spawn $ XMonad.terminal conf)
     , ((super .|. shiftMask,        xK_Return),  spawn $ myTerminal ++ " --float")
     , ((super .|. mod1Mask,         xK_Return),  spawn $ myTerminal ++ " --full")
@@ -71,6 +71,8 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
 
     , ((super,                           xK_c),  kill)
     , ((super,                      xK_Escape),  spawn "xkill")
+    , ((super,                           xk_d), spawn "xfce4-appfinder -c --disable-server")
+    , ((super,                           xk_a)), spawn "xfce4-appfinder --disable-server"
 
     -- Window Manager Specific -----------------------------------------
 
