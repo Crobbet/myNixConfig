@@ -89,7 +89,7 @@
   snippets.luasnip.enable = true;
   filetree = {
     neo-tree = {
-      enable = false;
+      enable = true;
     };
   };
 
