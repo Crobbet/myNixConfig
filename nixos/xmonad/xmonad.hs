@@ -70,9 +70,9 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
 
 
     , ((super,                           xK_c),  kill)
-    , ((super,                      xK_Escape),  spawn "xkill")
-    , ((super,                           xK_d), spawn "xfce4-appfinder -c --disable-server")
-    , ((super,                           xK_a)), spawn "xfce4-appfinder --disable-server"
+    , ((super,                      xK_Escape),  spawn $ "xkill")
+    , ((super,                           xK_d), spawn  $ "xfce4-appfinder -c --disable-server")
+    , ((super,                           xK_a), spawn $ "xfce4-appfinder --disable-server")
 
     -- Window Manager Specific -----------------------------------------
 
