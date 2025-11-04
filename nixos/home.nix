@@ -55,6 +55,13 @@
   };
 
   programs = {
+    emacs = {
+      enable = true;
+      package = pkgs.emacs;
+      extraPackages = epkgs: [
+        epkgs.auctex
+      ];
+    };
     fd.enable = true;
 
     eza = {
