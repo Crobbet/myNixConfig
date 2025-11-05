@@ -1,5 +1,9 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    emacs
+    ((emacsPackagesFor emacsPgtkNativeComp).emacsWithPackages (
+      epkgs: [ epkgs.embark epkgs.consult ]
+    ))
     genymotion
 
     yazi

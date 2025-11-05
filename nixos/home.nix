@@ -53,10 +53,6 @@
       size = 20;
     };
   };
-
-  programs.emacs = {
-    enable = true;
-  };
   programs = {
     fd.enable = true;
 
