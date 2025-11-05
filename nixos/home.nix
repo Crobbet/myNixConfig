@@ -54,6 +54,9 @@
     };
   };
 
+  programs.emacs = {
+    enable = true;
+  };
   programs = {
     fd.enable = true;
 
