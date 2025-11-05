@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     emacs
-    ((emacsPackagesFor emacsPgtkNativeComp).emacsWithPackages (
+    ((emacsPackagesFor stable).emacsWithPackages (
       epkgs: [ epkgs.embark epkgs.consult ]
     ))
     genymotion
