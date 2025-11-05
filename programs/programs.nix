@@ -2,7 +2,7 @@
   environment.systemPackages = with pkgs; [
     emacs
     ((emacsPackagesFor emacs).emacsWithPackages (
-      epkgs: [ epkgs.embark epkgs.consult ]
+      epkgs: [ epkgs.embark-consult ]
     ))
     genymotion
 
