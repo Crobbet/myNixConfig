@@ -4,6 +4,7 @@
     ((emacsPackagesFor emacs).emacsWithPackages (
       epkgs: [ epkgs.embark-consult epkgs.evil ]
     ))
+    gnome-disk-utility
     genymotion
 
     yazi
