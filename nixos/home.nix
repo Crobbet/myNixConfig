@@ -93,6 +93,10 @@
       };
       plugins = {
         projects = pkgs.yaziPlugins.projects;
+        yatline = pkgs.yaziPlugins.yatline-githead;
+        yatline-catppuccin = pkgs.yaziPlugins.yatline-catppuccin;
+      };
+      flavors = {
       };
     };
     fd.enable = true;
