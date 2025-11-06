@@ -149,9 +149,9 @@
 
           # Any other modules you like (e.g., $jobs, $battery, $time)
           # Uncomment the ones you want:
-          # "$jobs "
-          # "$battery "
-          # "$time "
+          "$jobs "
+          "$battery "
+          "$time "
         ];
         scan_timeout = 10;
         character = {
