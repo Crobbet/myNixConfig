@@ -127,8 +127,6 @@
 
     starship = {
       enable = true;
-      settings = {
-      };
     };
   };
 
