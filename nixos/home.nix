@@ -128,12 +128,21 @@
       enable = true;
       settings = {
         add_newline = false;
-        format = lib.concatStrings [
-          "$all"
-          "$package"
-          "$line_break"
-          "$character"
-        ];
+        format =
+          lib.concatStrings [
+            #          "$all"
+            #"$package"
+            #"$line_break"
+            #"$character"
+
+            ""
+            "
+$hostname$shlvl$jobs$directory$git_branch$git_state$git_status
+$nodejs$python$rust$cargo$golang$java$php$ruby$lua
+$character
+"
+            ""
+          ];
         scan_timeout = 10;
         character = {
           success_symbol = "[𝄞](bold green)";
