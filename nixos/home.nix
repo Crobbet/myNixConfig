@@ -127,38 +127,102 @@
     starship = {
       enable = true;
       settings = {
-        add_newline = false;
-        format = lib.concatStrings [
-          #          "$all"
-          #"$package"
-          #"$line_break"
-          "$character"
-        ];
-        right_format = lib.concatStrings [
-          # Hostname + shell level (useful when SSH‑ing)
-          "$hostname$shlvl "
+    add_newline = false;
 
-          # Current working directory (truncated)
-          "$directory "
+    # -----------------------------------------------------------------
+    # 1️⃣  Whole‑prompt format (left side)
+    # -----------------------------------------------------------------
+    # The triple‑quoted string ('''…''') lets us keep the exact
+    # formatting (including back‑slashes) that you had in the TOML.
+    format = '''
+[░▒▓](#a3aed2)\ [  ](bg:#a3aed2 fg:#090c0c)\ [](bg:#769ff0 fg:#a3aed2)\ $directory\ [](fg:#769ff0 bg:#394260)\ $git_branch\ $git_status\ [](fg:#394260 bg:#212736)\ $nodejs\ $rust\ $golang\ $php\ [](fg:#212736 bg:#1d2230)\ $time\ [ ](fg:#1d2230)\ 
+\n$character'''
+    ;
 
-          # Git information (branch, state, status)
-          "$git_branch$git_state$git_status "
+    # -----------------------------------------------------------------
+    # 2️⃣  Module‑specific customisations
+    # -----------------------------------------------------------------
 
-          # Language runtimes / tools that are currently active
-          "$nodejs$python$rust$cargo "
+    ## ── Directory ───────────────────────────────────────────────────────
+    directory = {
+      style = "fg:#e3e5e5 bg:#769ff0";
+      format = "[ $path ]($style)";
+      truncation_length = 3;
+      truncation_symbol = "…/";
+    };
 
-          # Any other modules you like (e.g., $jobs, $battery, $time)
-          # Uncomment the ones you want:
-          "$jobs "
-          "$battery "
-          "$time "
-        ];
-        scan_timeout = 10;
-        character = {
-          success_symbol = "[❯](${lib.escapeShellArg "character"})";
+    ## ── Directory substitutions (icons for special folders) ─────────────
+    "directory.substitutions" = {
+      Documents = "󰈙 ";
+      Downloads = " ";
+      Music    = " ";
+      Pictures = " ";
+    };
 
-          error_symbol = "[✖](${lib.escapeShellArg "errorChar"})";
-        };
+    ## ── Git branch ───────────────────────────────────────────────────────
+    git_branch = {
+      symbol = "";
+      style  = "bg:#394260";
+      format = ''[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'';
+    };
+
+    ## ── Git status ───────────────────────────────────────────────────────
+    git_status = {
+      style  = "bg:#394260";
+      format = ''[[( $all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'';
+    };
+
+    ## ── Node.js ────────────────────────────────────────────────────────
+    nodejs = {
+      symbol = "";
+      style  = "bg:#212736";
+      format = ''[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'';
+    };
+
+    ## ── Rust ───────────────────────────────────────────────────────────
+    rust = {
+      symbol = "";
+      style  = "bg:#212736";
+      format = ''[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'';
+    };
+
+    ## ── Go (Golang) ─────────────────────────────────────────────────────
+    golang = {
+      symbol = "";
+      style  = "bg:#212736";
+      format = ''[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'';
+    };
+
+    ## ── PHP ────────────────────────────────────────────────────────────
+    php = {
+      symbol = "";
+      style  = "bg:#212736";
+      format = ''[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'';
+    };
+
+    ## ── Time ───────────────────────────────────────────────────────────
+    time = {
+      disabled = false;
+      time_format = "%R";               # Hour:Minute (24‑h)
+      style = "bg:#1d2230";
+      format = ''[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'';
+    };
+
+    # -----------------------------------------------------------------
+    # 3️⃣  Prompt character (same as in your original config)
+    # -----------------------------------------------------------------
+    character = {
+      success_symbol = "[❯](bold green)";
+      error_symbol   = "[✖](bold red)";
+    };
+
+    # -----------------------------------------------------------------
+    # 4️⃣  Miscellaneous tweaks you already had
+    # -----------------------------------------------------------------
+    scan_timeout = 10;
+  };
+}
+       };
       };
     };
   };
