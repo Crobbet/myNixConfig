@@ -30,7 +30,7 @@
   ];
 
   home.file = {
-#    ".config/starship.toml".source = ./xmonad/star.toml;
+    #    ".config/starship.toml".source = ./xmonad/star.toml;
     ".xmonad/xmonad.hs".source = ./xmonad/xmonad.hs;
     ".xmonad/picom.conf".source = ./xmonad/picom.conf;
     ".xmonad/autorun.sh".source = ./xmonad/autorun.sh;
@@ -55,6 +55,46 @@
     };
   };
   programs = {
+    yazi = {
+      enableNushellIntegration = true;
+      keymap = {
+        input.prepend_keymap = [
+          {
+            run = "close";
+            on = ["<c-q>"];
+          }
+          {
+            run = "close --submit";
+            on = ["<enter>"];
+          }
+          {
+            run = "escape";
+            on = ["<esc>"];
+          }
+          {
+            run = "backspace";
+            on = ["<backspace>"];
+          }
+        ];
+        mgr.prepend_keymap = [
+          {
+            run = "escape";
+            on = ["<esc>"];
+          }
+          {
+            run = "quit";
+            on = ["q"];
+          }
+          {
+            run = "close";
+            on = ["<c-q>"];
+          }
+        ];
+      };
+      plugins = {
+        projects = pkgs.yaziPlugins.projects;
+      };
+    };
     fd.enable = true;
 
     eza = {
