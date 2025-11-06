@@ -30,7 +30,7 @@
   ];
 
   home.file = {
-    ".config/starship.toml".source = ./xmonad/star.toml;
+#    ".config/starship.toml".source = ./xmonad/star.toml;
     ".xmonad/xmonad.hs".source = ./xmonad/xmonad.hs;
     ".xmonad/picom.conf".source = ./xmonad/picom.conf;
     ".xmonad/autorun.sh".source = ./xmonad/autorun.sh;
@@ -127,6 +127,9 @@
 
     starship = {
       enable = true;
+      settings = {
+preset = "gruvbox";
+      };
     };
   };
 
