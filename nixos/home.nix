@@ -128,21 +128,20 @@
       enable = true;
       settings = {
         add_newline = false;
-        format =
-          lib.concatStrings [
-            #          "$all"
-            #"$package"
-            #"$line_break"
-            #"$character"
+        format = lib.concatStrings [
+          #          "$all"
+          #"$package"
+          #"$line_break"
+          #"$character"
+          # ── First line: host / shell depth / cwd
+          "[╭─$hostname$shlvl $directory](${lib.escapeShellArg "style_user_host"}) "
+          # ── Git info (branch + status) + language runtimes
+          "[╰─$git_branch$git_status](${lib.escapeShellArg "style_git"}) "
+          "$nodejs$python$rust$cargo "
 
-            ""
-            "
-$hostname$shlvl$jobs$directory$git_branch$git_state$git_status
-$nodejs$python$rust$cargo$golang$java$php$ruby$lua
-$character
-"
-            ""
-          ];
+          # ── Bottom line: the prompt character (green / red)
+          "\n[╰─$character](${lib.escapeShellArg "style_prompt"})"
+        ];
         scan_timeout = 10;
         character = {
           success_symbol = "[𝄞](bold green)";
