@@ -72,9 +72,7 @@
       enable = true;
       enableNushellIntegration = true;
       settings = {
-        auto_sync = true;
-        sync_frequency = "5m";
-        sync_address = "https://api.atuin.sh";
+        auto_sync = false;
         search_mode = "prefix";
       };
     };
