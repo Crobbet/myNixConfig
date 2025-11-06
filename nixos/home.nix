@@ -132,20 +132,32 @@
           #          "$all"
           #"$package"
           #"$line_break"
-          #"$character"
-          # ── First line: host / shell depth / cwd
-          "[╭─$hostname$shlvl $directory](${lib.escapeShellArg "style_user_host"}) "
-          # ── Git info (branch + status) + language runtimes
-          "[╰─$git_branch$git_status](${lib.escapeShellArg "style_git"}) "
+          "$character"
+        ];
+        right_format = lib.concatStrings [
+          # Hostname + shell level (useful when SSH‑ing)
+          "$hostname$shlvl "
+
+          # Current working directory (truncated)
+          "$directory "
+
+          # Git information (branch, state, status)
+          "$git_branch$git_state$git_status "
+
+          # Language runtimes / tools that are currently active
           "$nodejs$python$rust$cargo "
 
-          # ── Bottom line: the prompt character (green / red)
-          "\n[╰─$character](${lib.escapeShellArg "style_prompt"})"
+          # Any other modules you like (e.g., $jobs, $battery, $time)
+          # Uncomment the ones you want:
+          # "$jobs "
+          # "$battery "
+          # "$time "
         ];
         scan_timeout = 10;
         character = {
-          success_symbol = "[𝄞](bold green)";
-          error_symbol = "[!](bold red)";
+          success_symbol = "[❯](${lib.escapeShellArg "character"})";
+
+          error_symbol = "[✖](${lib.escapeShellArg "errorChar"})";
         };
       };
     };
