@@ -91,6 +91,8 @@
   services.xserver.enable = true;
   services.xserver.desktopManager.xterm.enable = false;
   services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.desktopManager.cinnamon.enable = true;
+  programs.river.enable = true;
   services.guix.enable = true;
 
   services.xserver.xkb = {
