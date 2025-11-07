@@ -6,17 +6,17 @@
     polarity = "dark";
     fonts = {
       serif = {
-        package = pkgs.comic-mono;
+        package = pkgs.iosevka;
         name = "Comic Sans";
       };
 
       sansSerif = {
-        package = pkgs.comic-mono;
+        package = pkgs.iosevka;
         name = "Comic";
       };
 
       monospace = {
-        package = pkgs.nerd-fonts.comic-shanns-mono;
+        package = pkgs.nerd-fonts.hack;
         name = "ComicShans";
       };
 
