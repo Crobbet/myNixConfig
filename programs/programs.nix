@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    foot
     weston
     xfce.xfce4-panel
     xfce.xfce4-panel-profiles
