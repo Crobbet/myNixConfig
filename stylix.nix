@@ -21,7 +21,7 @@
       };
 
       emoji = {
-        package = pkgs.noto-fonts-color-emoji;
+        package = pkgs.iosevka;
         name = "Noto Color Emoji";
       };
     };
