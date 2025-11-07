@@ -69,6 +69,7 @@
 
   virtualisation.containers.enable = true;
   virtualisation = {
+    waydroid.enable = true;
     podman = {
       enable = true;
       dockerCompat = true;
@@ -117,25 +118,6 @@
       ExecStart = "${pkgs.bash}/bin/bash -c 'echo 1 > /sys/bus/usb/devices/1-0:1.0/usb1-port4/disable'";
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    xfce.xfce4-panel
-    xfce.xfce4-panel-profiles
-
-    xfce.xfce4-appfinder
-    xfce.xfce4-battery-plugin
-
-    acpi
-    light
-
-    killall
-    haskell-language-server
-    xsettingsd
-
-    picom-pijulius
-    iosevka
-    nerd-fonts.iosevka
-  ];
 
   services.xserver = {
     desktopManager = {

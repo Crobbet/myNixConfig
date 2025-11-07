@@ -1,8 +1,26 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    weston
+    xfce.xfce4-panel
+    xfce.xfce4-panel-profiles
+
+    xfce.xfce4-appfinder
+    xfce.xfce4-battery-plugin
+
+    acpi
+    light
+
+    killall
+    haskell-language-server
+    xsettingsd
+
+    picom-pijulius
+    iosevka
+    nerd-fonts.iosevka
+
     emacs
     ((emacsPackagesFor emacs).emacsWithPackages (
-      epkgs: [ epkgs.embark-consult epkgs.evil ]
+      epkgs: [epkgs.embark-consult epkgs.evil]
     ))
     gnome-disk-utility
     genymotion
