@@ -91,7 +91,6 @@
   services.xserver.enable = true;
   services.xserver.desktopManager.xterm.enable = false;
   services.xserver.displayManager.lightdm.enable = true;
-  programs.hyprland.enable = true;
   services.guix.enable = true;
 
   services.xserver.xkb = {
