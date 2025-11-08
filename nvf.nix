@@ -150,7 +150,7 @@
   notes = {
     obsidian.enable = false;
     neorg.enable = true;
-    orgmode.enable = false;
+    orgmode.enable = true;
     mind-nvim.enable = true;
     todo-comments.enable = true;
   };
