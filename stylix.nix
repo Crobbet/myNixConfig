@@ -2,7 +2,7 @@
   stylix = {
     enable = true;
     #    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    image = ./nixos/miku.jpg;
+    image = ./wp14767634-black-and-white-sakura-wallpapers.webp;
     polarity = "dark";
 #    fonts = {
 #      serif = {
