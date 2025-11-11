@@ -2,7 +2,7 @@
   stylix = {
     enable = true;
     #    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    image = ./1353259.jpeg;
+    image = ./violet-evergarden-eddited.png;
     polarity = "dark";
 #    fonts = {
 #      serif = {
