@@ -179,10 +179,8 @@
       settings = {
         add_newline = false;
         format = lib.concatStrings [
-          #          "$all"
-          #"$package"
-          #"$line_break"
           "$fill"
+          "$line_break"
           "$character"
         ];
         right_format = lib.concatStrings [
