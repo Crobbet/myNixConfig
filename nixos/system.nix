@@ -124,6 +124,8 @@
     desktopManager = {
       xfce = {
         enable = true;
+        noDesktop = true;
+        enableXfwm = false;
       };
     };
     windowManager = {
