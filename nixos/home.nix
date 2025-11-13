@@ -182,6 +182,7 @@
           #          "$all"
           #"$package"
           #"$line_break"
+          "$fill"
           "$character"
         ];
         right_format = lib.concatStrings [
