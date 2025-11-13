@@ -8,7 +8,7 @@
   home.homeDirectory = "/home/bt";
   home.stateVersion = "25.11";
   home.packages = with pkgs; [
-    xfce.xfce4-xfce4-pulseaudio-plugin
+    xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-battery-plugin
     xfce.xfce4-clipman-plugin
     xfce.xfce4-datetime-plugin
