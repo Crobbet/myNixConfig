@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    krita
     foot
     weston
     xfce.xfce4-panel
