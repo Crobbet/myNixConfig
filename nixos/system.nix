@@ -129,6 +129,14 @@
       };
     };
     windowManager = {
+      awesome = {
+        enable = true;
+        luaModules = with pkgs.luaPackages; [
+          luarocks
+          luadbi-mysql
+          awesome-wm-widgets
+        ];
+      };
       xmonad = {
         enable = true;
         enableContribAndExtras = true;
