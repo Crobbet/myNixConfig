@@ -36,7 +36,6 @@
   ];
 
   home.file = {
-    #    ".config/starship.toml".source = ./xmonad/star.toml;
     ".xmonad/xmonad.hs".source = ./xmonad/xmonad.hs;
     ".xmonad/picom.conf".source = ./xmonad/picom.conf;
     ".xmonad/autorun.sh".source = ./xmonad/autorun.sh;
@@ -47,8 +46,8 @@
     enable = true;
     settings = {
       "Net/IconThemeName" = "WhiteSur";
-      "Xcursor/theme" = "GoogleDot-Red";
-      "Xcursor/size" = "24";
+      #"Xcursor/theme" = "GoogleDot-Red";
+      #"Xcursor/size" = "24";
     };
   };
 
@@ -194,9 +193,9 @@
 
           # Any other modules you like (e.g., $jobs, $battery, $time)
           # Uncomment the ones you want:
-          # "$jobs "
-          # "$battery "
-          # "$time "
+          "$jobs "
+          "$battery "
+          "$time "
         ];
         scan_timeout = 10;
         character = {
