@@ -4,7 +4,7 @@ DIR="$HOME/.config/xmonad"
 CONFIG="$DIR/alacritty/alacritty.toml"
 
 if [ "$1" == "--float" ]; then
-  ghostty --class='ghostty'
+  ghostty --class='ghostty-float'
 elif [ "$1" == "--full" ]; then
   alacritty --class 'alacritty-fullscreen,alacritty-fullscreen' --config-file "$CONFIG" \
     -o window.startup_mode="'Fullscreen'" \
