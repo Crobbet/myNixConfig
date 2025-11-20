@@ -12,7 +12,8 @@
     xfce.xfce4-battery-plugin
     xfce.xfce4-clipman-plugin
     xfce.xfce4-docklike-plugin
-    
+    xfce.xfce4-power-manager
+
     whitesur-icon-theme
 
     ente-desktop

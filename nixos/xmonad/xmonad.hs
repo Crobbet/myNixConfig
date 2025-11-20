@@ -35,9 +35,6 @@ myFocusFollowsMouse = True
 myClickJustFocuses :: Bool
 myClickJustFocuses = False
 
--- ** DO NOT CHANGE TEXT FORMAT ** --
--- ** Required for themes to work correctly ** --
---
 -- Width of the window border in pixels
 myBorderWidth = 2
 
@@ -279,7 +276,7 @@ defaults = def {
 
       -- hooks, layouts
         manageHook         = myManageHook,
-        layoutHook         = gaps [(L,10), (R,0), (U,30), (D,0)] $ spacingRaw False (Border 10 0 10 0) True (Border 0 10 0 10) True $ myLayout,
+        layoutHook         = gaps [(L,0), (R,0), (U,30), (D,0)] $ spacingRaw False (Border 10 0 10 0) True (Border 0 10 0 10) True $ myLayout,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook >> addEWMHFullscreen
