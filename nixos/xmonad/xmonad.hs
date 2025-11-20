@@ -54,9 +54,6 @@ myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 myTerminal :: String
 myTerminal = "/home/bt/.xmonad/xmonad_term"
 
-myTermKitty :: String
-myTermKitty = "~/.config/xmonad/scripts/xmonad_kitty"
-
 -- ## Key Bindings ## -------------------------------------------------------------------
 myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
 
@@ -206,7 +203,7 @@ myManageHook = composeAll . concat $
     , [resource =? i --> doIgnore | i <- myIgnores]
     ]
     where
-        myCFloats = ["alacritty-float", "kitty-float", "Music", "MPlayer", "mpv",
+        myCFloats = ["alacritty-float", "ghostty-float", "kitty-float", "Music", "MPlayer", "mpv",
                     "Gimp", "feh", "Viewnior", "Gpicview",
                     "Kvantum Manager", "qt5ct", "VirtualBox Manager", "qemu", "Qemu-system-x86_64",
                     "Lxappearance", "Nitrogen", "Arandr", "Pavucontrol", "Xfce4-power-manager-settings", "Nm-connection-editor" , ""]

@@ -1,15 +1,10 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## launch alacritty with xmonad config
-
-# xmonad directory
 DIR="$HOME/.config/xmonad"
 CONFIG="$DIR/alacritty/alacritty.toml"
 
 if [ "$1" == "--float" ]; then
-  ghostty --class='alacritty-float,alacritty-float'
+  ghostty --class='ghostty'
 elif [ "$1" == "--full" ]; then
   alacritty --class 'alacritty-fullscreen,alacritty-fullscreen' --config-file "$CONFIG" \
     -o window.startup_mode="'Fullscreen'" \
