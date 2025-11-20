@@ -11,7 +11,7 @@
     };
 
     stylix = {
-      url = "github:einetuer/stylix";
+      url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
