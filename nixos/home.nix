@@ -54,11 +54,6 @@
 
   gtk = {
     enable = true;
-    cursorTheme = {
-      name = "GoogleDot-Red";
-      package = pkgs.google-cursor;
-      size = 20;
-    };
   };
   programs = {
     yazi = {
