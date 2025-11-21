@@ -154,4 +154,5 @@
       openDefaultPorts = true;
     };
   };
+  programs.hyprland.enable = true;
 }
