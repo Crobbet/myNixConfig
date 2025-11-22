@@ -72,6 +72,19 @@ myKeys =
 
     -- Restart XMonad
     , ("M-q", spawn "xmonad --recompile && xmonad --restart")
+
+    -- Increase
+    , ("M-=", sendMessage $ IncGap 5 L
+                 >> sendMessage (IncGap 5 R)
+                 >> sendMessage (IncGap 5 U)
+                 >> sendMessage (IncGap 5 D))
+
+    -- Decrease
+    , ("M--", sendMessage $ DecGap 5 L
+                 >> sendMessage (DecGap 5 R)
+                 >> sendMessage (DecGap 5 U)
+                 >> sendMessage (DecGap 5 D))
+
     ]
 
 -- Float toggle helper
