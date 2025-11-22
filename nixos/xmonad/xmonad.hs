@@ -182,7 +182,7 @@ myMouseBindings (XConfig {XMonad.modMask = super}) = M.fromList $
     ]
 
 -- ## Layouts ## -------------------------------------------------------------------------
-myLayout = mkToggle (NBFULL ?? NoBorders ?? EOT) $ avoidStruts(Full ||| tiled ||| Mirror tiled)
+myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ avoidStruts(Full ||| tiled ||| Mirror tiled)
     where
         -- default tiling algorithm partitions the screen into two panes
         tiled   = Tall nmaster delta ratio
