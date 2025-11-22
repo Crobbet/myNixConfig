@@ -254,7 +254,7 @@ myLogHook   = return ()
 -- ## Main Function ## --------------------------------------------------------------------
 
 -- Run xmonad with all the configs we set up.
-main = xmonad $ fullscreenSupport $ docks $ ewmh defaults
+main = xmonad $ ewmFullscreen $ docks $ ewmh defaults
 
 defaults = def {
       -- configs
