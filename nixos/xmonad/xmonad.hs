@@ -76,8 +76,8 @@ myKeys =
     ]
 
 -- Float toggle helper
- toggleFloat :: Window -> X ()
- toggleFloat w = windows $ \s -> if M.member w (W.floating s)
+toggleFloat :: Window -> X ()
+toggleFloat w = windows $ \s -> if M.member w (W.floating s)
                                    then W.sink w s
                                    else W.float w (W.RationalRect (1/4) (1/10) (1/2) (4/5)) s
 
