@@ -93,7 +93,7 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
     , ((super .|. shiftMask,         xK_space),  setLayout $ XMonad.layoutHook conf)
 
     -- Toggle fullscreen
-    , ((super,                           xK_f),  toggleFull >> spawn "polybar-msg cmd toggle")
+    , ((super,                           xK_f),  sendMessage (Toggle NBFULL) >> sendMessage ToggleStruts)
 
     -- Toggle between floating and tiling
     , ((super,                       xK_space),  withFocused toggleFloat)
