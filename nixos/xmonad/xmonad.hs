@@ -222,12 +222,6 @@ addNETSupported x   = withDisplay $ \dpy -> do
        when (fromIntegral x `notElem` sup) $
          changeProperty32 dpy r a_NET_SUPPORTED a propModeAppend [fromIntegral x]
 
-addEWMHFullscreen :: X ()
-addEWMHFullscreen   = do
-    wms <- getAtom "_NET_WM_STATE"
-    wfs <- getAtom "_NET_WM_STATE_FULLSCREEN"
-    mapM_ addNETSupported [wms, wfs]
-
 -- toggle b/w tiling and floating (for keybinding)
 toggleFloat w = windows (\s -> if M.member w (W.floating s)
                             then W.sink w s
