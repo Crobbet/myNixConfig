@@ -1,5 +1,7 @@
 -- ## Modules ## -------------------------------------------------------------------
 import XMonad
+import XMonad.Layout.MultiToggle
+import XMonad.Layout.MultiToggle.Instances
 import XMonad.Util.SpawnOnce
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
@@ -180,7 +182,7 @@ myMouseBindings (XConfig {XMonad.modMask = super}) = M.fromList $
     ]
 
 -- ## Layouts ## -------------------------------------------------------------------------
-myLayout = avoidStruts(tiled ||| Mirror tiled ||| Full)
+myLayout = mkToggle (NBFULL ?? NoBorders ?? EOT) $ avoidStruts(Full ||| tiled ||| Mirror tiled)
     where
         -- default tiling algorithm partitions the screen into two panes
         tiled   = Tall nmaster delta ratio
