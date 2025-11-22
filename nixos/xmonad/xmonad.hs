@@ -41,7 +41,7 @@ mySpacing i = spacingRaw True (Border i i i i) True (Border i i i i) True
 
 myGaps = gaps [(L,60),(R,0),(U,30),(D,0)]
 
-myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 10 $ myGaps $ tiled ||| Mirror tiled ||| Full
+myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 10 $ myGaps $ Full ||| tiled ||| Mirror tiled
   where
     tiled = Tall 1 (3/100) (1/2)
 
