@@ -84,6 +84,7 @@ myKeys =
                  >> sendMessage (DecGap 5 R)
                  >> sendMessage (DecGap 5 U)
                  >> sendMessage (DecGap 5 D))
+    , ("M-*", sendMessage $ SetGaps [(L,60),(R,0),(U,30),(D,0)])
 
     ]
 
