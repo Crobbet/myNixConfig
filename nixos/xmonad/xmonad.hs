@@ -276,7 +276,7 @@ defaults = def {
         layoutHook         = gaps [(L,60), (R,0), (U,30), (D,0)] $ spacingRaw False (Border 10 0 10 0) True (Border 0 10 0 10) True $ myLayout,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
-        startupHook        = myStartupHook >> addEWMHFullscreen
+        startupHook        = myStartupHook 
     }
 
 -- | Finally, a copy of the default bindings in simple textual tabular format.
