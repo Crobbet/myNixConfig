@@ -269,7 +269,7 @@ defaults = def {
 
       -- hooks, layouts
         manageHook         = myManageHook,
-        layoutHook         = gaps [(L,60), (R,0), (U,30), (D,0)] $ spacingRaw False (Border 10 0 10 0) True (Border 0 10 0 10) True $ myLayout,
+        layoutHook         =  spacingRaw False (Border 10 0 10 0) True (Border 0 10 0 10) True $ gaps [(L,60), (R,0), (U,30), (D,0)] $ myLayout,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook 
