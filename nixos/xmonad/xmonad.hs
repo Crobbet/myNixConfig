@@ -60,7 +60,7 @@ myKeys =
 
     -- Floating / fullscreen
     , ("M-Space", withFocused toggleFloat)
-    , ("M-f", sendMessage $ Toggle NBFULL >> sendMessage ToggleStruts)
+    , ("M-f", sendMessage (Toggle NBFULL) >> sendMessage ToggleStruts)
 
     -- Gaps
     , ("M-C-g", sendMessage ToggleGaps)
