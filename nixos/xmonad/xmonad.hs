@@ -27,7 +27,7 @@ myStartupHook = do
     spawnOnce "~/.xmonad/autorun.sh"
 
 -- ## Settings ## ---------------------------------------------------------------------
-myTerminal = "alacritty"
+myTerminal = "ghostty"
 myModMask = mod4Mask
 myBorderWidth = 2
 myFocusedBorderColor = "#0000FF"
