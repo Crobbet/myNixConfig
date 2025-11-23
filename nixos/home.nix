@@ -8,6 +8,8 @@
   home.homeDirectory = "/home/bt";
   home.stateVersion = "25.11";
   home.packages = with pkgs; [
+    rofi
+
     xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-battery-plugin
     xfce.xfce4-clipman-plugin
