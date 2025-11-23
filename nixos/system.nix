@@ -91,6 +91,7 @@
   services.xserver.enable = true;
   services.xserver.desktopManager.xterm.enable = false;
   services.xserver.displayManager.lightdm.enable = true;
+  services.displayManager.defaultSession = "xmonad";
   services.xserver.desktopManager.cinnamon.enable = true;
   programs.sway.enable = true;
   services.guix.enable = true;
