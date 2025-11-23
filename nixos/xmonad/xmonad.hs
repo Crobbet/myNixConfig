@@ -56,7 +56,7 @@ myManageHook = composeAll
 -- ## Keybindings ## ------------------------------------------------------------------
 myKeys =
     [ ("M-<Return>", spawn myTerminal)
-
+    , ("M-d", spawn "rofi -show drun")
     -- Floating / fullscreen
     , ("M-Space", withFocused toggleFloat)
     , ("M-f", sendMessage (Toggle NBFULL) >> sendMessage ToggleStruts)
