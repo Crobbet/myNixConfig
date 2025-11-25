@@ -38,7 +38,7 @@ myWorkspaces = map show [1..10]
 -- ## Layouts ## ----------------------------------------------------------------------
 mySpacing i = spacingRaw True (Border i i i i) True (Border i i i i) True
 
-myGaps = gaps [(L,60),(R,0),(U,30),(D,0)]
+myGaps = gaps [(L,60),(R,0),(U,0),(D,30)]
 
 myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 4 $ myGaps $ Full ||| tiled ||| Mirror tiled
   where
