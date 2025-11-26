@@ -48,7 +48,6 @@
     efibootmgr
 
     kdePackages.filelight
-    komikku
 
     torrential
     unzip
