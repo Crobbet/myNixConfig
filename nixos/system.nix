@@ -90,9 +90,8 @@
   # Services
   services.xserver.enable = true;
   services.xserver.desktopManager.xterm.enable = false;
-  services.xserver.displayManager.lightdm.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
   services.displayManager.defaultSession = "none+xmonad";
-  services.xserver.desktopManager.cinnamon.enable = true;
   programs.sway.enable = true;
   services.guix.enable = true;
 
@@ -121,6 +120,7 @@
     };
   };
 
+  services.desktopManager.cosmic.enable = true;
   services.xserver = {
     desktopManager = {
       xfce = {
@@ -130,14 +130,6 @@
       };
     };
     windowManager = {
-      awesome = {
-        enable = true;
-        luaModules = with pkgs.luaPackages; [
-          luarocks
-          luadbi-mysql
-          awesome-wm-widgets
-        ];
-      };
       xmonad = {
         enable = true;
         enableContribAndExtras = true;
