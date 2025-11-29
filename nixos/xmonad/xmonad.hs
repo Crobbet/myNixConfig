@@ -26,7 +26,7 @@ myStartupHook = do
 -- ## Settings ## ---------------------------------------------------------------------
 myTerminal = "ghostty"
 myModMask = mod4Mask
-myBorderWidth = 0
+myBorderWidth = 1
 myFocusedBorderColor = "#0000FF"
 myNormalBorderColor  = "#272E33"
 
