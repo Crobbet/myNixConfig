@@ -95,9 +95,9 @@
     enable = true;
   };
   services.gnome = {
-    core-apps = false;
-    core-developer-tools = false;
-    games = false;
+    core-apps.enable = false;
+    core-developer-tools.enable = false;
+    games.enable = false;
   };
   services.displayManager.defaultSession = "none+xmonad";
   programs.sway.enable = true;
