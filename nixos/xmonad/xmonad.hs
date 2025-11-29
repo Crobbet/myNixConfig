@@ -1,6 +1,6 @@
 -- #Imports# --
 import XMonad
-import Xmobar (config(..), defaultConfig, xmobar)
+import Xmobar (Config(..), defaultConfig, xmobar)
 import XMonad.Config.Desktop
 import XMonad.Util.SpawnOnce
 import XMonad.Util.EZConfig(additionalKeysP)
