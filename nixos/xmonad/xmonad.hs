@@ -1,6 +1,5 @@
 -- #Imports# --
 import XMonad
-import Xmobar (Config(..), defaultConfig, xmobar)
 import XMonad.Config.Desktop
 import XMonad.Util.SpawnOnce
 import XMonad.Util.EZConfig(additionalKeysP)
@@ -26,7 +25,7 @@ myStartupHook = do
 -- ## Settings ## ---------------------------------------------------------------------
 myTerminal = "ghostty"
 myModMask = mod4Mask
-myBorderWidth = 1
+myBorderWidth = 0
 myFocusedBorderColor = "#0000FF"
 myNormalBorderColor  = "#272E33"
 
@@ -80,10 +79,10 @@ toggleFloat w = windows $ \s -> if M.member w (W.floating s)
 
 -- ## Main ## -------------------------------------------------------------------------
 main :: IO ()
-main = xmonad $ xmobar $ ewmhFullscreen $ ewmh $ docks $ def
+main = xmonad $ ewmhFullscreen $ ewmh $ docks $ def
     { terminal           = myTerminal
     , modMask            = myModMask
-    --, borderWidth        = myBorderWidth
+    , borderWidth        = myBorderWidth
     , focusedBorderColor = myFocusedBorderColor
     , normalBorderColor  = myNormalBorderColor
     , workspaces         = myWorkspaces
