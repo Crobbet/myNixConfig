@@ -18,7 +18,7 @@ import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
 import Xmobar
-import           Xmobar (Config(..), Align(..), Position(..), Color(..), Font(..))
+import           Xmobar (Config(..), Align(..))
 barConfig :: Config
 barConfig = Xmobar.defaultConfig
     { font            = "xft:DejaVu Sans Mono:size=10"
