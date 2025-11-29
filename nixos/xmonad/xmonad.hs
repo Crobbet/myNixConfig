@@ -83,7 +83,7 @@ main :: IO ()
 main = xmonad $ xmobar $ ewmhFullscreen $ ewmh $ docks $ def
     { terminal           = myTerminal
     , modMask            = myModMask
-    , borderWidth        = myBorderWidth
+    --, borderWidth        = myBorderWidth
     , focusedBorderColor = myFocusedBorderColor
     , normalBorderColor  = myNormalBorderColor
     , workspaces         = myWorkspaces
