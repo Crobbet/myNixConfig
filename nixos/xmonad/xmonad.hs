@@ -28,7 +28,6 @@ barConfig = Xmobar.defaultConfig
     , lowerOnStart    = False
     , hideOnStart     = False
     , persistent      = True
-    , hideOnEsc       = False
     , allDesktops     = True
     , overrideRedirect = True
     , iconRoot        = "~/.xmonad/icons/"
