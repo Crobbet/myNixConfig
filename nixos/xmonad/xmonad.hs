@@ -17,32 +17,6 @@ import XMonad.Layout.MultiToggle.Instances
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
-import Xmobar
-import           Xmobar (Config(..), Align(..))
-barConfig :: Config
-barConfig = Xmobar.defaultConfig
-    { font            = "xft:DejaVu Sans Mono:size=10"
-    , bgColor         = "#282c34"
-    , fgColor         = "#bbc2cf"
-    , position        = Static { xpos = 0, ypos = 0, width = 1920, height = 24 }
-    , lowerOnStart    = False
-    , hideOnStart     = False
-    , persistent      = True
-    , allDesktops     = True
-    , overrideRedirect = True
-    , iconRoot        = "~/.xmonad/icons/"
-    , template        = "%UnsafeXMonadLog% }{ %date% | %cpu% | %memory% | %dynnetwork% | %battery% | %volume% "
-    , commands        =
-        [ Xmobar.Run XMonadLog
-        , Xmobar.Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-        , Xmobar.Run Cpu         ["-L","3","-H","50","--high","red"] 10
-        , Xmobar.Run Memory      ["-t","Mem: <usedratio>%"] 10
-        , Xmobar.Run DynNetwork  ["-t","Net: <rx>KB↑ <tx>KB↓"] 10
-        , Xmobar.Run Battery     ["-t","Bat: <acstatus> <left>%"] 30
-        , Xmobar.Run Volume       "default" "Master" [] 10
-        ]
-    }
-
 -- ## Startup ## ----------------------------------------------------------------------
 myStartupHook :: X ()
 myStartupHook = do
@@ -105,7 +79,7 @@ toggleFloat w = windows $ \s -> if M.member w (W.floating s)
 
 -- ## Main ## -------------------------------------------------------------------------
 main :: IO ()
-main = xmonad $ (Xmobar.xmobar barConfig) $ ewmhFullscreen $ ewmh $ docks $ def
+main = xmonad $ ewmhFullscreen $ ewmh $ docks $ def
     { terminal           = myTerminal
     , modMask            = myModMask
     , XMonad.borderWidth        = myBorderWidth
