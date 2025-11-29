@@ -6,6 +6,7 @@
 import XMonad
 import XMonad.Config.Desktop
 import XMonad.Util.SpawnOnce
+import XMonad.Util.ALSA
 import XMonad.Util.EZConfig(additionalKeysP)
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
@@ -56,6 +57,7 @@ myManageHook = composeAll
 -- ## Keybindings ## ------------------------------------------------------------------
 myKeys =
     [ ("M-<Return>", spawn myTerminal)
+    , ("M-L", sendMessage toggleMute)
     , ("M-d", spawn "rofi -show drun")
     -- Floating / fullscreen
     , ("M-Space", withFocused toggleFloat)
