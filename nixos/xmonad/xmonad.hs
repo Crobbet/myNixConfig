@@ -17,6 +17,8 @@ import XMonad.Layout.MultiToggle.Instances
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
+import Xmobar (Config(...), defaulConfig, xmobar)
+
 -- ## Startup ## ----------------------------------------------------------------------
 myStartupHook :: X ()
 myStartupHook = do
@@ -79,7 +81,7 @@ toggleFloat w = windows $ \s -> if M.member w (W.floating s)
 
 -- ## Main ## -------------------------------------------------------------------------
 main :: IO ()
-main = xmonad $ ewmhFullscreen $ ewmh $ docks $ def
+main = xmonad $ (xmobar defaulConfig) $ ewmhFullscreen $ ewmh $ docks $ def
     { terminal           = myTerminal
     , modMask            = myModMask
     , borderWidth        = myBorderWidth
