@@ -90,7 +90,15 @@
   # Services
   services.xserver.enable = true;
   services.xserver.desktopManager.xterm.enable = false;
-  services.displayManager.cosmic-greeter.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
+  services.desktopManager.gnome = {
+    enable = true;
+  };
+  services.gnome = {
+    core-apps = false;
+    core-developer-tools = false;
+    games = false;
+  };
   services.displayManager.defaultSession = "none+xmonad";
   programs.sway.enable = true;
   services.guix.enable = true;
@@ -125,8 +133,8 @@
     desktopManager = {
       xfce = {
         enable = true;
-        noDesktop = true;
-        enableXfwm = false;
+        noDesktop = false;
+        enableXfwm = true;
       };
     };
     windowManager = {
@@ -147,5 +155,4 @@
       openDefaultPorts = true;
     };
   };
-  programs.hyprland.enable = true;
 }
