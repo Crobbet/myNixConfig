@@ -1,9 +1,6 @@
--- Clean, modern XMonad configuration
--- Includes EWMH, proper fullscreen, gaps, spacing, floating rules,
--- and tidy keybindings.
-
--- ## Imports ## ----------------------------------------------------------------------
+-- #Imports# --
 import XMonad
+import Xmobar (config(..), defaultConfig, xmobar)
 import XMonad.Config.Desktop
 import XMonad.Util.SpawnOnce
 import XMonad.Util.EZConfig(additionalKeysP)
@@ -29,7 +26,7 @@ myStartupHook = do
 -- ## Settings ## ---------------------------------------------------------------------
 myTerminal = "ghostty"
 myModMask = mod4Mask
-myBorderWidth = 2
+myBorderWidth = 0
 myFocusedBorderColor = "#0000FF"
 myNormalBorderColor  = "#272E33"
 
@@ -57,29 +54,16 @@ myManageHook = composeAll
 myKeys =
     [ ("M-<Return>", spawn myTerminal)
     , ("M-d", spawn "rofi -show drun")
-    -- Floating / fullscreen
     , ("M-Space", withFocused toggleFloat)
     , ("M-f", sendMessage (Toggle NBFULL) >> sendMessage ToggleStruts)
-
-    -- Gaps
     , ("M-C-g", sendMessage ToggleGaps)
-
-    -- Layout switching
     , ("M-C-<Space>", sendMessage NextLayout)
-
-    -- Windows
     , ("M-c", kill)
-
-    -- Restart XMonad
     , ("M-q", spawn "xmonad --recompile && xmonad --restart")
-
-    -- Increase
     , ("M-=", sendMessage (IncGap 5 L)
                  >> sendMessage (IncGap 5 R)
                  >> sendMessage (IncGap 5 U)
                  >> sendMessage (IncGap 5 D))
-
-    -- Decrease
     , ("M--", sendMessage (DecGap 5 L)
                  >> sendMessage (DecGap 5 R)
                  >> sendMessage (DecGap 5 U)
@@ -96,7 +80,7 @@ toggleFloat w = windows $ \s -> if M.member w (W.floating s)
 
 -- ## Main ## -------------------------------------------------------------------------
 main :: IO ()
-main = xmonad $ ewmhFullscreen $ ewmh $ docks $ def
+main = xmonad $ xmobar defaultConfig $ ewmhFullscreen $ ewmh $ docks $ def
     { terminal           = myTerminal
     , modMask            = myModMask
     , borderWidth        = myBorderWidth
