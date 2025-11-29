@@ -17,7 +17,7 @@ import XMonad.Layout.MultiToggle.Instances
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
-import Xmobar (Config(..), defaulConfig, xmobar)
+import Xmobar (Config(..), defaultConfig, xmobar)
 
 -- ## Startup ## ----------------------------------------------------------------------
 myStartupHook :: X ()
