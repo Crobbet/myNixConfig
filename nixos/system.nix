@@ -137,6 +137,7 @@
           haskellPackages.xmonad-contrib
           haskellPackages.xmonad-extras
           haskellPackages.xmonad
+          haskellPackages.xmonad-volume
         ];
       };
     };
