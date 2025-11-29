@@ -81,7 +81,7 @@ toggleFloat w = windows $ \s -> if M.member w (W.floating s)
 
 -- ## Main ## -------------------------------------------------------------------------
 main :: IO ()
-main = xmonad $ (xmobar Xmobar.defaultConfig) $ ewmhFullscreen $ ewmh $ docks $ def
+main = xmonad $ (Xmobar.xmobar Xmobar.defaultConfig) $ ewmhFullscreen $ ewmh $ docks $ def
     { terminal           = myTerminal
     , modMask            = myModMask
     , XMonad.borderWidth        = myBorderWidth
