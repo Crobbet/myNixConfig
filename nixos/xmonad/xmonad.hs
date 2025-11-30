@@ -15,9 +15,23 @@ import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
 
 import XMonad.Layout.Accordion
+import XMonad.Layout.LayoutModifier
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
+
+
+data Strip a = Strip Int  -- viewport offset
+    deriving (Read, Show)
+
+instance LayoutModifier Strip a where
+    redoLayout (Strip off) _ rect ws = 
+        let shiftW (w,r) = (w, r { rect_x = rect_x r - fromIntegral off })
+        in return (map shiftW ws, Nothing)
+
+scrollLeft  = SendMessage (Strip (-50))
+scrollRight = SendMessage (Strip 50)
+
 
 -- ## Startup ## ----------------------------------------------------------------------
 myStartupHook :: X ()
@@ -38,7 +52,7 @@ mySpacing i = spacingRaw True (Border i i i i) True (Border i i i i) True
 
 myGaps = gaps [(L,60),(R,0),(U,0),(D,30)]
 
-myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 4 $ myGaps $ Mirror Accordion ||| Mirror tiled ||| Full ||| tiled
+myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 4 $ myGaps $ tiled ||| Full ||| Mirror tiled
   where
     tiled = Tall 2 (3/100) (1/1)
 
@@ -70,6 +84,8 @@ myKeys =
                  >> sendMessage (DecGap 5 U)
                  >> sendMessage (DecGap 5 D))
     , ("M-*", sendMessage $ ToggleGaps )
+    , ("M-l", scrollLeft)
+    , ("M-h", scrollRight)
 
     ]
 
