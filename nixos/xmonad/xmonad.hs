@@ -14,6 +14,8 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
 
+import XMonad.Layout.Accordion
+
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
@@ -36,7 +38,7 @@ mySpacing i = spacingRaw True (Border i i i i) True (Border i i i i) True
 
 myGaps = gaps [(L,60),(R,0),(U,0),(D,30)]
 
-myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 4 $ myGaps $ Mirror tiled ||| Full ||| tiled
+myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 4 $ myGaps $ Accordion ||| Mirror tiled ||| Full ||| tiled
   where
     tiled = Tall 2 (3/100) (1/1)
 
