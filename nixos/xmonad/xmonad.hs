@@ -56,6 +56,7 @@ myManageHook = composeAll
 myKeys =
     [ ("M-<Return>", spawn myTerminal)
     , ("M-d", spawn "rofi -show drun")
+    , ("M-w" , spawn "rofi -show windows")
     , ("M-Space", withFocused toggleFloat)
     , ("M-f", sendMessage (Toggle NBFULL) >> sendMessage ToggleStruts)
     , ("M-C-g", sendMessage ToggleGaps)
@@ -77,8 +78,6 @@ myKeys =
     , ("M-S-<Space>", windows W.swapMaster)
     , ("M-S-<Right>", windows W.swapDown)
     , ("M-S-<Left>",  windows W.swapUp)
-    , ("M-g", goToSelected def)   -- popup for **current workspace**
-    , ("M-S-g", bringSelected def) -- popup that brings the chosen window here
     ]
 
 -- Float toggle helper
