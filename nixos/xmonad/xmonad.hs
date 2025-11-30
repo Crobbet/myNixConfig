@@ -13,7 +13,6 @@ import XMonad.Layout.Gaps
 import XMonad.Layout.NoBorders
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
-import XMonad.Layout.Scrolling
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
@@ -26,7 +25,7 @@ myStartupHook = do
 -- ## Settings ## ---------------------------------------------------------------------
 myTerminal = "ghostty"
 myModMask = mod4Mask
-myBorderWidth = 1
+myBorderWidth = 2
 myFocusedBorderColor = "#af5977"
 myNormalBorderColor  = "#272E33"
 
@@ -37,9 +36,9 @@ mySpacing i = spacingRaw True (Border i i i i) True (Border i i i i) True
 
 myGaps = gaps [(L,60),(R,0),(U,0),(D,30)]
 
-myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 4 $ myGaps $ Scrolling.scrolling Scrolling.tall||| tiled ||| Full ||| Mirror tiled
+myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 4 $ myGaps $ tiled ||| Full ||| Mirror tiled
   where
-    tiled = Tall 1 (3/100) (1/2)
+    tiled = Tall 1 (3/100) (2/3)
 
 -- ## Manage Hook ## ------------------------------------------------------------------
 myManageHook = composeAll
