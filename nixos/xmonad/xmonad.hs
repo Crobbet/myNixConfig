@@ -56,7 +56,7 @@ myManageHook = composeAll
 myKeys =
     [ ("M-<Return>", spawn myTerminal)
     , ("M-d", spawn "rofi -show drun")
-    , ("M-w" , spawn "rofi -show windows")
+    , ("M-w" , spawn "rofi -show window")
     , ("M-Space", withFocused toggleFloat)
     , ("M-f", sendMessage (Toggle NBFULL) >> sendMessage ToggleStruts)
     , ("M-C-g", sendMessage ToggleGaps)
