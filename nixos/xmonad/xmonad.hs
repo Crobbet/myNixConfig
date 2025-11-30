@@ -29,9 +29,6 @@ instance LayoutModifier Strip a where
         let shiftW (w,r) = (w, r { rect_x = rect_x r - fromIntegral off })
         in return (map shiftW ws, Nothing)
 
-scrollLeft  = SendMessage (Strip (-50))
-scrollRight = SendMessage (Strip 50)
-
 
 -- ## Startup ## ----------------------------------------------------------------------
 myStartupHook :: X ()
@@ -84,8 +81,9 @@ myKeys =
                  >> sendMessage (DecGap 5 U)
                  >> sendMessage (DecGap 5 D))
     , ("M-*", sendMessage $ ToggleGaps )
-    , ("M-l", scrollLeft)
-    , ("M-h", scrollRight)
+    , ("M-l", SendMessage (Strip (-50))
+)
+    , ("M-h", sendMessage (Strip (50)))
 
     ]
 
