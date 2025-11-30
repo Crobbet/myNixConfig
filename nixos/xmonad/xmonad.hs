@@ -36,9 +36,9 @@ mySpacing i = spacingRaw True (Border i i i i) True (Border i i i i) True
 
 myGaps = gaps [(L,60),(R,0),(U,0),(D,30)]
 
-myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 4 $ myGaps $ tiled ||| Full ||| Mirror tiled
+myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 4 $ myGaps $ Mirror tiled ||| Full ||| tiled
   where
-    tiled = Tall 1 (3/100) (2/3)
+    tiled = Tall 2 (3/100) (1/1)
 
 -- ## Manage Hook ## ------------------------------------------------------------------
 myManageHook = composeAll
