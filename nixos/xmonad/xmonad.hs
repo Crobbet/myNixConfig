@@ -82,9 +82,7 @@ myKeys =
                  >> sendMessage (DecGap 5 D))
     , ("M-*", sendMessage $ ToggleGaps )
     , ("M-l", sendMessage (Strip (-50))
-)
     , ("M-h", sendMessage (Strip (50))
-
     ]
 
 -- Float toggle helper
