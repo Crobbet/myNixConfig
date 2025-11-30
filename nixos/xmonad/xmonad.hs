@@ -15,6 +15,7 @@ import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
 
 import XMonad.Layout.TwoPane
+import XMonad.Actions.GridSelect
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
@@ -76,6 +77,8 @@ myKeys =
     , ("M-S-<Space>", windows W.swapMaster)
     , ("M-S-<Right>", windows W.swapDown)
     , ("M-S-<Left>",  windows W.swapUp)
+    , ("M-g", goToSelected def)   -- popup for **current workspace**
+    , ("M-S-g", bringSelected def) -- popup that brings the chosen window here
     ]
 
 -- Float toggle helper
