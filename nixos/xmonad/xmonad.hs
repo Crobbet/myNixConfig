@@ -70,6 +70,12 @@ myKeys =
                  >> sendMessage (DecGap 5 U)
                  >> sendMessage (DecGap 5 D))
     , ("M-*", sendMessage $ ToggleGaps )
+
+    , ("M-<Right>", windows W.focusDown)
+    , ("M-<Left>",  windows W.focusUp)
+    , ("M-<Space>", windows W.swapMaster)
+    , ("M-S-<Right>", windows W.swapDown)
+    , ("M-S-<Left>",  windows W.swapUp)
     ]
 
 -- Float toggle helper
