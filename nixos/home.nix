@@ -8,8 +8,8 @@
   home.homeDirectory = "/home/bt";
   home.stateVersion = "25.11";
   home.packages = with pkgs; [
-    plank
     rofi
+    xmobar
 
     xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-battery-plugin
@@ -42,7 +42,7 @@
     ".xmonad/xmonad.hs".source = ./xmonad/xmonad.hs;
     ".xmonad/picom.conf".source = ./xmonad/picom.conf;
     ".xmonad/autorun.sh".source = ./xmonad/autorun.sh;
-   # ".xmonad/xmonad_term".source = ./xmonad/xmonad_term;
+    # ".xmonad/xmonad_term".source = ./xmonad/xmonad_term;
   };
 
   services.xsettingsd = {
