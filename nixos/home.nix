@@ -8,8 +8,8 @@
   home.homeDirectory = "/home/bt";
   home.stateVersion = "25.11";
   home.packages = with pkgs; [
+    eww
     rofi
-    xmobar
 
     xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-battery-plugin
