@@ -8,6 +8,7 @@
   home.homeDirectory = "/home/bt";
   home.stateVersion = "25.11";
   home.packages = with pkgs; [
+    polybar
     eww
     rofi
 
