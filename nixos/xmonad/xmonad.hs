@@ -28,7 +28,7 @@ myStartupHook = do
 -- ## Settings ## ---------------------------------------------------------------------
 myTerminal = "ghostty"
 myModMask = mod4Mask
-myBorderWidth = 2
+myBorderWidth = 3
 myFocusedBorderColor = "#af5977"
 myNormalBorderColor  = "#272E33"
 
@@ -37,7 +37,7 @@ myWorkspaces = map show [1..6]
 -- ## Layouts ## ----------------------------------------------------------------------
 mySpacing i = spacingRaw True (Border i i i i) True (Border i i i i) True
 
-myGaps = gaps [(L,60),(R,0),(U,0),(D,30)]
+myGaps = gaps [(L,60),(R,0),(U,0),(D,0)]
 
 myLayout = mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ mySpacing 4 $ myGaps $ TwoPane (3/100) (1/2) ||| tiled ||| Full ||| Mirror tiled
   where
