@@ -17,6 +17,7 @@
     xfce.xfce4-clipman-plugin
     xfce.xfce4-docklike-plugin
     xfce.xfce4-power-manager
+    xfce.xfce4-volumed-pulse
 
     whitesur-icon-theme
 
