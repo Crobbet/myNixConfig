@@ -18,6 +18,7 @@
     xfce.xfce4-docklike-plugin
     xfce.xfce4-power-manager
     xfce.xfce4-volumed-pulse
+    xfce.xfce4-xfce4-notifyd
 
     whitesur-icon-theme
 
