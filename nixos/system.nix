@@ -123,11 +123,6 @@
   services.desktopManager.cosmic.enable = true;
   services.xserver = {
     desktopManager = {
-      xfce = {
-        enable = true;
-        noDesktop = false;
-        enableXfwm = true;
-      };
     };
     windowManager = {
       xmonad = {
