@@ -19,7 +19,7 @@
     xfce.xfce4-power-manager
     xfce.xfce4-volumed-pulse
 
-    dunst
+    xfce.xfce4-notifyd
     libnotify
 
     
