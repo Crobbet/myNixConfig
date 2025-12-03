@@ -32,7 +32,7 @@ myBorderWidth = 2
 myFocusedBorderColor = "#af5977"
 myNormalBorderColor  = "#272E33"
 
-myWorkspaces = map show [1..10]
+myWorkspaces = map show [1..6]
 
 -- ## Layouts ## ----------------------------------------------------------------------
 mySpacing i = spacingRaw True (Border i i i i) True (Border i i i i) True
