@@ -8,6 +8,7 @@
   home.homeDirectory = "/home/bt";
   home.stateVersion = "25.11";
   home.packages = with pkgs; [
+    nautilus
     tint2
     polybar
     eww
