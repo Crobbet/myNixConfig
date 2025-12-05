@@ -92,7 +92,12 @@
   services.xserver.desktopManager.xterm.enable = false;
   services.xserver.displayManager.lightdm.enable = true;
   services.displayManager.defaultSession = "none+xmonad";
-  services.xserver.desktopManager.xfce.enable = true;
+  services.xserver.desktopManager.xfce = {
+    enable = true;
+    noDesktop = true;
+    enableXfwm = false;
+  };
+
   programs.sway.enable = true;
   services.guix.enable = true;
 
