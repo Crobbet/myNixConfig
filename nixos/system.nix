@@ -92,7 +92,7 @@
   services.xserver.desktopManager.xterm.enable = false;
   services.xserver.displayManager.lightdm.enable = true;
   services.displayManager.defaultSession = "none+xmonad";
-  services.desktopManager.gnome.enable = true;
+  services.desktopManager.pantheon.enable = true;
   programs.sway.enable = true;
   services.guix.enable = true;
 
