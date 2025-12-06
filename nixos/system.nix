@@ -129,6 +129,7 @@
 
   services.xserver = {
     windowManager = {
+      berry.enable = true;
       xmonad = {
         enable = true;
         enableContribAndExtras = true;
