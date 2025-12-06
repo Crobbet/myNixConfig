@@ -23,9 +23,12 @@ import qualified Data.Map as M
 -- ## Startup ## ----------------------------------------------------------------------
 myStartupHook :: X ()
 myStartupHook = do
-    spawnOnce "~/.xmonad/autorun.sh"
+    spawnOnce "tint2 &"
+    spawnOnce "nitrogen --restore &"
+    spawnOnce "xfce4-power-manager &"
+    spwanOnce "xfce4-volumed-pulse &"
 
--- ## Settings ## ---------------------------------------------------------------------
+## Settings ## ---------------------------------------------------------------------
 myTerminal = "ghostty"
 myModMask = mod4Mask
 myBorderWidth = 3
