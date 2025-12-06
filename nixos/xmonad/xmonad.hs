@@ -28,7 +28,7 @@ myStartupHook = do
     spawnOnce "xfce4-power-manager &"
     spwanOnce "xfce4-volumed-pulse &"
 
-## Settings ## ---------------------------------------------------------------------
+-- ## Settings ## ---------------------------------------------------------------------
 myTerminal = "ghostty"
 myModMask = mod4Mask
 myBorderWidth = 3
