@@ -23,7 +23,7 @@ import qualified Data.Map as M
 -- ## Startup ## ----------------------------------------------------------------------
 myStartupHook :: X ()
 myStartupHook = do
-    spawnOnce "tint2 & nitrogen --restore & xfce4-power-manager & xfce4-volumed-pulse &"
+    spawnOnce "tint2 & nitrogen --restore & xfce4-power-manager & xfce4-volumed-pulse & picom --config ~/.config/xmonad/picom.conf &"
 
 -- ## Settings ## ---------------------------------------------------------------------
 myTerminal = "ghostty"
