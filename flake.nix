@@ -89,7 +89,7 @@
         enableContribAndExtras = true;
         extraPackages = haskellPackages: [
           xmonad.defaultPackage.${system}
-          xmonad-contrib.defaultPackages.${system}
+          xmonad-contrib.defaultPackage.${system}
           #haskellPackages.xmonad-contrib
           haskellPackages.xmonad-extras
           haskellPackages.xmobar
