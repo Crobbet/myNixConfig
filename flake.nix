@@ -86,9 +86,9 @@
     windowManager = {
       xmonad = {
         enable = true;
-        package = xmonad.packages.${system}.default;
         enableContribAndExtras = true;
         extraPackages = haskellPackages: [
+          xmonad.packages.${system}.default
           xmonad-contrib.packages.${system}.xmonad-contrib
           #haskellPackages.xmonad-contrib
           haskellPackages.xmonad-extras
