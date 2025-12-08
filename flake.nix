@@ -47,8 +47,8 @@
     {
 
     packages.${system} = {
-      my_Xmonad = inputs.xmonad.defaultPackage.${system};
-      my_Xmonad_contrib = inputs.xmonad-contrib.defaultPackage.${system};
+      xmonad = inputs.xmonad.defaultPackage.${system};
+      xmonad_contrib = inputs.xmonad-contrib.defaultPackage.${system};
 
 
       my-neovim =
