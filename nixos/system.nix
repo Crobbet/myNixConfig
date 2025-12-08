@@ -127,22 +127,6 @@
     };
   };
 
-
-  services.xserver = {
-    windowManager = {
-      berry.enable = true;
-      xmonad = {
-        enable = true;
-        enableContribAndExtras = true;
-        extraPackages = haskellPackages: [
-          haskellPackages.xmonad-contrib
-          haskellPackages.xmonad-extras
-          haskellPackages.xmonad
-          haskellPackages.xmobar
-        ];
-      };
-    };
-  };
   services = {
     syncthing = {
       enable = true;
