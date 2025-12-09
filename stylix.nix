@@ -2,7 +2,7 @@
   stylix = {
     enable = true;
     #    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    image = ./nixos/miku.jpg;
+    image = ./b-297.jpg;
     polarity = "dark";
   };
 }
