@@ -56,9 +56,8 @@ myManageHook = composeAll
 
 myBrightnessControls :: Int -> String
 myBrightnessControls x
-  | x < 0 = "brightnessctl -n 1% s 5%-"
-  | x > 0 = "brightnessctl s +5%"
-  | x == 0 = "brightnessctl s 1%" 
+  | x < 0 = "brightnessctl s 4800-"
+  | x > 0 = "brightnessctl s 4800%" 
 
 -- ## Keybindings ## ------------------------------------------------------------------
 myKeys =
@@ -87,7 +86,6 @@ myKeys =
     , ("M-S-<Left>",  windows W.swapUp)
     , ("<XF86MonBrightnessUp>", spawn (myBrightnessControls 5))
     , ("<XF86MonBrightnessDown>", spawn (myBrightnessControls (-5)))
-    , ("M-<XF86MonBrightnessDown>", spawn (myBrightnessControls 0))
     ]
 
 -- Float toggle helper
