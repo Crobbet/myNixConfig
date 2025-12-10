@@ -56,8 +56,8 @@ myManageHook = composeAll
 
 myBrightnessControls :: Int -> String
 myBrightnessControls x
-  | x < 0 = "brightnessctl s 4800-"
-  | x > 0 = "brightnessctl s 4800%" 
+  | x < 0 = "brightnessctl s 4800- -n 1"
+  | x > 0 = "brightnessctl s +4800" 
 
 -- ## Keybindings ## ------------------------------------------------------------------
 myKeys =
