@@ -88,8 +88,8 @@ myKeys =
     , ("M-S-<Space>", windows W.swapMaster)
     , ("M-S-<Right>", windows W.swapDown)
     , ("M-S-<Left>",  windows W.swapUp)
-    , ("<XF86MonBrightnessUp>",   spawn "brightnessctl s +5%")
-    , ("<XF86MonBrightnessDown>", spawn "brightnessctl s 5%-")
+    , ("<XF86MonBrightnessUp>",   spawn (myBrightnessControls 5))
+    , ("<XF86MonBrightnessDown>", spawn (myBrightnessControls -5))
     ]
 
 -- Float toggle helper
