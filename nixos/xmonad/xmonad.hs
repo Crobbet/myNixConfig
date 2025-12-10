@@ -52,7 +52,7 @@ myManageHook = composeAll
     , resource  =? "desktop_window" --> doIgnore
     ]
 
-myBrightnessControls x
+myBrightnessControls x do
     | x < 0 = "brightnessctl s -5%"
     | x > 0 = "brightnessctl s +5%"
     | x == 0 = "brightnessctl s 1%"
