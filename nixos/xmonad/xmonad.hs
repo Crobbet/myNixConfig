@@ -86,7 +86,7 @@ myKeys =
     , ("M-S-<Right>", windows W.swapDown)
     , ("M-S-<Left>",  windows W.swapUp)
     , ("<XF86MonBrightnessUp>", spawn (myBrightnessControls 5))
-    , ("<XF86MonBrightnessDown>", spawn (myBrightnessControls -5))
+    , ("<XF86MonBrightnessDown>", spawn (myBrightnessControls (-5)))
  --   , ("M-<XF86MonBrightnessDown>", spawn (myBrightnessControls 0))
     ]
 
