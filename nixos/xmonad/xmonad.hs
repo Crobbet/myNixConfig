@@ -56,7 +56,7 @@ myManageHook = composeAll
 
 myBrightnessControls :: Int -> String
 myBrightnessControls x
-  | x < 0 = "brightnessctl s 5%-"
+  | x < 0 = "brightnessctl -n 1% s 5%-"
   | x > 0 = "brightnessctl s +5%"
   | x == 0 = "brightnessctl s 1%" 
 
