@@ -58,8 +58,8 @@ possibleBrightnessVariations = 1 : [5,10..100]
 
 myBrightnessControls :: Int -> String
 myBrightnessControls x
-    | x < 0 = "brightnessctl s " + show possibleBrightnessVariations !! 2
-    | x > 0 = "brightnessctl s " + show possibleBrightnessVariations !! 20
+    | x < 0 = "brightnessctl s " + show (possibleBrightnessVariations !! 2)
+    | x > 0 = "brightnessctl s " + show (possibleBrightnessVariations !! 20)
     | otherwise = "brightnessctl"
 
 -- ## Keybindings ## ------------------------------------------------------------------
