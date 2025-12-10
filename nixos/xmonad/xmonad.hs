@@ -56,8 +56,8 @@ myManageHook = composeAll
 
 myBrightnessControls :: Int -> String
 myBrightnessControls x
-  | x < 0 = "brightnessctl s -5% &"
-  | x > 0 = "brightnessctl s +5% &"
+  | x < 0 = "brightnessctl s -5%"
+  | x > 0 = "brightnessctl s +5%"
 --  | x == 0 = "brightnessctl s 1% &" 
 
 -- ## Keybindings ## ------------------------------------------------------------------
@@ -80,14 +80,13 @@ myKeys =
                  >> sendMessage (DecGap 5 U)
                  >> sendMessage (DecGap 5 D))
     , ("M-*", sendMessage $ ToggleGaps )
-
     , ("M-<Right>", windows W.focusDown)
     , ("M-<Left>",  windows W.focusUp)
     , ("M-S-<Space>", windows W.swapMaster)
     , ("M-S-<Right>", windows W.swapDown)
     , ("M-S-<Left>",  windows W.swapUp)
-    , ("<XF86MonBrightnessUp>",   spawn (myBrightnessControls 5))
-    , ("<XF86MonBrightnessDown>", spawn (myBrightnessControls (-5)))
+    , ("<XF86MonBrightnessUp>", spawn (myBrightnessControls 5))
+    , ("<XF86MonBrightnessDown>", spawn (myBrightnessControls -5))
  --   , ("M-<XF86MonBrightnessDown>", spawn (myBrightnessControls 0))
     ]
 
