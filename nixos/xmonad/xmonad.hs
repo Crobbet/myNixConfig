@@ -53,8 +53,8 @@ myManageHook = composeAll
     ]
 
 myBrightnessControls x
-    | x <= 0 = "brightnessctl s -5%"
-    | x >= 0 = "brightnessctl s +5"
+    | x < 0 = "brightnessctl s -5%"
+    | x > 0 = "brightnessctl s +5"
     | x == 0 = "brightnessctl s 1%"
 
 -- ## Keybindings ## ------------------------------------------------------------------
