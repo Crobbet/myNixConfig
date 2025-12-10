@@ -52,12 +52,12 @@ myManageHook = composeAll
     , resource  =? "desktop_window" --> doIgnore
     ]
 
--- ## Manage Brightness ## --------------
+
 myBrightnessControls :: Int -> String
 myBrightnessControls x
-                | x < 0 = "brightnessctl s +5%"
-                | x > 0 = "brightnessctl s -5%"
-                | otherwise = "brightnessctl"
+    | x < 0 = "brightnessctl s -5%"
+    | x > 0 = "brightnessctl s +5%"
+    | otherwise = "brightnessctl"
 
 -- ## Keybindings ## ------------------------------------------------------------------
 myKeys =
