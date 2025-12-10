@@ -52,6 +52,13 @@ myManageHook = composeAll
     , resource  =? "desktop_window" --> doIgnore
     ]
 
+-- ## Manage Brightness ## --------------
+myBrightnessControls :: Int -> String
+myBrightnessControls x
+                | x < 0 = "brightnessctl s +5%"
+                | x > 0 = "brightnessctl s -5%"
+                | otherwise = "brightnessctl"
+
 -- ## Keybindings ## ------------------------------------------------------------------
 myKeys =
     [ ("M-<Return>", spawn myTerminal)
@@ -78,6 +85,7 @@ myKeys =
     , ("M-S-<Space>", windows W.swapMaster)
     , ("M-S-<Right>", windows W.swapDown)
     , ("M-S-<Left>",  windows W.swapUp)
+    , ("M-i", spawn (myBrightnessControls 1))
     ]
 
 -- Float toggle helper
