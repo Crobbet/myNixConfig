@@ -81,7 +81,6 @@ myKeys =
     , ("M-S-<Left>",  windows W.swapUp)
     , ("<XF86MonBrightnessUp>", spawn "brightnessctl s +4800")
     , ("<XF86MonBrightnessDown>", spawn "brightnessctl s 4800- -n 1")
-    , ("M-b", spawn "notify-send '$(brightnessctl i)'")
     ]
 
 -- Float toggle helper
