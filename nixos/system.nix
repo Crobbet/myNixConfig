@@ -93,7 +93,8 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.displayManager.defaultSession = "none+xmonad";
   services.desktopManager.plasma6.enable = true;
-  services.xserver.windowManager.hypr.enable = true;
+  services.xserver.windowManager.bspwm.enable = true;
+  services.xserver.windowManager.i3.enable = true;
   services.xserver.desktopManager.xfce = {
     enable = true;
     noDesktop = true;
