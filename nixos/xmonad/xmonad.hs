@@ -54,11 +54,6 @@ myManageHook = composeAll
 
 
 
-myBrightnessControls :: Int -> String
-myBrightnessControls x
-  | x < 0 = "brightnessctl s 4800- -n 1"
-  | x > 0 = "brightnessctl s +4800" 
-
 -- ## Keybindings ## ------------------------------------------------------------------
 myKeys =
     [ ("M-<Return>", spawn myTerminal)
@@ -84,8 +79,9 @@ myKeys =
     , ("M-S-<Space>", windows W.swapMaster)
     , ("M-S-<Right>", windows W.swapDown)
     , ("M-S-<Left>",  windows W.swapUp)
-    , ("<XF86MonBrightnessUp>", spawn (myBrightnessControls 5))
-    , ("<XF86MonBrightnessDown>", spawn (myBrightnessControls (-5)))
+    , ("<XF86MonBrightnessUp>", spawn "brightnessctl s +4800")
+    , ("<XF86MonBrightnessDown>", spawn "brightnessctl s 4800- -n 1")
+    , ("M-b", spawn "notify-send '$(brightnessctl i)'")
     ]
 
 -- Float toggle helper
