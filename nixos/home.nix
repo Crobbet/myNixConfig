@@ -147,9 +147,15 @@
           "$line_break"
           "$character"
         ];
+        right-format = [
+          "$directory"
+          "[]( bg:#394260)"
+          "$git_branch"
+          "$git_status"
+        ];
         scan_timeout = 10;
         character = {
-        success_symbol = " ⧐ ";
+        success_symbol = " ∫ ";
         error_symbol = " ✘ ";
         };
       };
