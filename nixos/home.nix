@@ -154,7 +154,7 @@
         error_symbol = " ✘ ";
         };
       };
-      enableNushellIntegration.enable = true;
+      enableNushellIntegration = true;
     };
 
    };
