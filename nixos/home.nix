@@ -141,7 +141,9 @@
         add_newline = false;
         format = lib.concatStrings [
           "$line_break"
-          "[░▒▓](#a3aed2)"
+          "▶︎ •၊၊||၊|။|||| |"
+          "[░▒▓]"
+          "[  ](bg:#a3aed2 fg:#090c0c)"
           "$package"
           "$line_break"
           "$character"
@@ -149,10 +151,10 @@
         scan_timeout = 10;
         character = {
         success_symbol = " ➜ ";
-        error_symbol = " ! ";
+        error_symbol = " ✘ ";
         };
       };
-      enableNushellIntegration = true;
+      enableNushellIntegration.enable = true;
     };
 
    };
