@@ -48,7 +48,6 @@
   ];
 
   home.file = {
-    ".xmonad/xmonad.hs".source = ./xmonad/xmonad.hs;
     ".xmonad/picom.conf".source = ./xmonad/picom.conf;
     ".xmonad/autorun.sh".source = ./xmonad/autorun.sh;
     # ".xmonad/xmonad_term".source = ./xmonad/xmonad_term;
@@ -69,41 +68,7 @@
   programs = {
     yazi = {
       enableNushellIntegration = true;
-      keymap = {
-        input.prepend_keymap = [
-          {
-            run = "close";
-            on = ["<c-q>"];
-          }
-          {
-            run = "close --submit";
-            on = ["<enter>"];
-          }
-          {
-            run = "escape";
-            on = ["<esc>"];
-          }
-          {
-            run = "backspace";
-            on = ["<backspace>"];
-          }
-        ];
-        mgr.prepend_keymap = [
-          {
-            run = "escape";
-            on = ["<esc>"];
-          }
-          {
-            run = "quit";
-            on = ["q"];
-          }
-          {
-            run = "close";
-            on = ["<c-q>"];
-          }
-        ];
-      };
-      plugins = {
+     plugins = {
         projects = pkgs.yaziPlugins.projects;
         yatline = pkgs.yaziPlugins.yatline-githead;
         yatline-catppuccin = pkgs.yaziPlugins.yatline-catppuccin;
