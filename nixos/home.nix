@@ -45,6 +45,7 @@
     htop
     nitrogen
     github-cli
+    starship
   ];
 
   services.xsettingsd = {
@@ -135,11 +136,7 @@
     carapace.enable = true;
     carapace.enableNushellIntegration = true;
 
-    starship = {
-      enable = true;
-      enableNushellIntegration = true;
-    };
-  };
+   };
 
   programs.helix = {
     enable = true;
