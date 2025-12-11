@@ -75,9 +75,6 @@
         #        /etc/nixos/hardware-configuration.nix
         ./programs/programs.nix
         inputs.home-manager.nixosModules.default
-        ({pkgs, ...}: {
-          environment.systemPackages = [self.packages.${pkgs.stdenv.system}.my-neovim];
-        })
 
         
 ({pkgs, ...}:
