@@ -81,7 +81,7 @@ myKeys =
     , ("M-S-<Left>",  windows W.swapUp)
     , ("<XF86AudioRaiseVolume", spawn "pactl set-sink-volume @DEFAULT_SINK@ +10%")
     , ("<XF86AudioLowerVolume", spawn "pactl set-sink-volume @DEFAULT_SINK@ -10%")
-    , ("<XF86AudioMute>," spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
+    , ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
     , ("<XF86MonBrightnessUp>", spawn "brightnessctl s +4800")
     , ("<XF86MonBrightnessDown>", spawn "brightnessctl s 4800- -n 1")
     ]
