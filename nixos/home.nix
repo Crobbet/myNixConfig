@@ -64,8 +64,6 @@
         yatline = pkgs.yaziPlugins.yatline-githead;
         yatline-catppuccin = pkgs.yaziPlugins.yatline-catppuccin;
       };
-      flavors = {
-      };
     };
     fd.enable = true;
 
@@ -139,39 +137,7 @@
 
     starship = {
       enable = true;
-      settings = {
-        add_newline = false;
-        format = lib.concatStrings [
-          "$fill"
-          "$line_break"
-          "$character"
-        ];
-        right_format = lib.concatStrings [
-          # Hostname + shell level (useful when SSH‑ing)
-          "$hostname$shlvl "
-
-          # Current working directory (truncated)
-          "$directory "
-
-          # Git information (branch, state, status)
-          "$git_branch$git_state$git_status "
-
-          # Language runtimes / tools that are currently active
-          "$nodejs$python$rust$cargo "
-
-          # Any other modules you like (e.g., $jobs, $battery, $time)
-          # Uncomment the ones you want:
-          "$jobs "
-          "$battery "
-          "$time "
-        ];
-        scan_timeout = 10;
-        character = {
-          success_symbol = "[❯](${lib.escapeShellArg "character"})";
-
-          error_symbol = "[✖](${lib.escapeShellArg "errorChar"})";
-        };
-      };
+      enableNushellIntegration = true;
     };
   };
 
