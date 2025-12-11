@@ -142,14 +142,14 @@
         format = lib.concatStrings [
           "$line_break"
           "[░▒▓]()"
-          "[ ❄️ ](bg:#a3aed2 fg:#090c0c)"
+          "[ ❄️ ]()"
           "$package"
           "$line_break"
           "$character"
         ];
         scan_timeout = 10;
         character = {
-        success_symbol = " ➜ ";
+        success_symbol = " ⧐ ";
         error_symbol = " ✘ ";
         };
       };
