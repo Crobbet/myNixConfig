@@ -47,12 +47,6 @@
     github-cli
   ];
 
-  home.file = {
-    ".xmonad/picom.conf".source = ./xmonad/picom.conf;
-    ".xmonad/autorun.sh".source = ./xmonad/autorun.sh;
-    # ".xmonad/xmonad_term".source = ./xmonad/xmonad_term;
-  };
-
   services.xsettingsd = {
     enable = true;
     settings = {
@@ -62,9 +56,6 @@
     };
   };
 
-  gtk = {
-    enable = true;
-  };
   programs = {
     yazi = {
       enableNushellIntegration = true;
