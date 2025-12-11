@@ -25,14 +25,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvf.url = "github:notashelf/nvf";
+
   };
 
   outputs = {
     self,
     nixpkgs,
     nixpkgsStable,
-    nvf,
     stylix,
     xmonad,
     xmonad-contrib,
@@ -49,21 +48,7 @@
     packages.${system} = {
       xmonad = inputs.xmonad.defaultPackage.${system};
       xmonad_contrib = inputs.xmonad-contrib.defaultPackage.${system};
-
-
-      my-neovim =
-        (nvf.lib.neovimConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          modules = [
-            (
-              {pkgs, ...}: {
-                config.vim = import ./nvf.nix;
-              }
-            )
-          ];
-        })
-        .neovim;
-      };
+     };
 
     nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
