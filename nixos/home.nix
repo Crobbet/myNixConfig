@@ -45,7 +45,6 @@
     htop
     nitrogen
     github-cli
-    starship
   ];
 
   services.xsettingsd = {
@@ -135,6 +134,26 @@
     };
     carapace.enable = true;
     carapace.enableNushellIntegration = true;
+
+    starship = {
+      enable = true;
+      settings = {
+        add_newline = false;
+        format = lib.concatStrings [
+          "$line_break"
+          "[░▒▓](#a3aed2)"
+          "$package"
+          "$line_break"
+          "$character"
+        ];
+        scan_timeout = 10;
+        character = {
+        success_symbol = " ➜ ";
+        error_symbol = " ! ";
+        };
+      };
+      enableNushellIntegration.enable = true;
+    };
 
    };
 
