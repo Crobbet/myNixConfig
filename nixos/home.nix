@@ -147,7 +147,7 @@
           "$line_break"
           "$character"
         ];
-        right_format = [
+        right_format = lib.concatStrings [
           "$directory"
           "[]( bg:#394260)"
           "$git_branch"
