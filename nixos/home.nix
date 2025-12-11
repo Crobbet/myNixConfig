@@ -141,7 +141,6 @@
         add_newline = false;
         format = lib.concatStrings [
           "$line_break"
-          "▶︎ •၊၊||၊|။|||| |"
           "[░▒▓]"
           "[  ](bg:#a3aed2 fg:#090c0c)"
           "$package"
