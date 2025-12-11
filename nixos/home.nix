@@ -142,16 +142,21 @@
         format = lib.concatStrings [
           "$line_break"
           "[░▒▓]()"
-          "[ ❄️ ]()"
+          "[ ❄️ ]()"
+          "$time"
           "$package"
           "$line_break"
           "$character"
         ];
         right_format = lib.concatStrings [
-          "$directory"
           "[]( bg:#394260)"
+          "$directory"
           "$git_branch"
           "$git_status"
+          "$nodejs"
+          "$rust"
+          "$golang"
+          "$php"
         ];
         scan_timeout = 10;
         character = {
