@@ -147,7 +147,7 @@
           "$line_break"
           "$character"
         ];
-        right-format = [
+        right_format = [
           "$directory"
           "[]( bg:#394260)"
           "$git_branch"
