@@ -149,7 +149,7 @@
           "$character"
         ];
         right_format = lib.concatStrings [
-          "[]( bg:#394260)"
+          "[⅀ ░▒▓  ]( bg:#394260)"
           "$directory"
           "$git_branch"
           "$git_status"
