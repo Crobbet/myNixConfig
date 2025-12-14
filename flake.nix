@@ -72,9 +72,9 @@
         extraPackages = haskellPackages: [
           xmonad.defaultPackage.${system}
           xmonad-contrib.defaultPackage.${system}
-          #haskellPackages.xmonad-contrib
           haskellPackages.xmonad-extras
           haskellPackages.xmobar
+          haskellPackages.libnotify
         ];
       };
     };
