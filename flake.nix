@@ -65,6 +65,9 @@
 ({pkgs, ...}:
 {
   services.xserver = {
+    desktopManager = {
+      mate.enable = true;
+    };
     windowManager = {
       xmonad = {
         enable = true;
