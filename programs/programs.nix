@@ -1,12 +1,10 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    bspwm
-    bsp-layout
-    
+    nixd
+ 
     sxhkd
 
     krita
-    foot
     weston
     xfce.xfce4-panel
     xfce.xfce4-panel-profiles
