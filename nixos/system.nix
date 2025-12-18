@@ -50,7 +50,7 @@
   system.stateVersion = "25.11";
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs nixmobar;};
+    extraSpecialArgs = {inherit inputs;};
     users = {
       "bt" = import ./home.nix;
     };
