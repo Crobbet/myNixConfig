@@ -48,14 +48,6 @@
   nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "25.11";
-
-  home-manager = {
-    extraSpecialArgs = {inherit inputs;};
-    users = {
-      "bt" = import ./home.nix;
-    };
-  };
-
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   specialisation.zen.configuration = {

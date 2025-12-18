@@ -65,6 +65,14 @@
         ./programs/programs.nix
         inputs.home-manager.nixosModules.default
 
+        ({
+          home-manager = {
+            extraSpecialArgs = {inherit inputs;};
+            users = {
+            "bt" = import ./home.nix;
+            };
+          };
+        })
         
 ({pkgs, ...}:
 {
