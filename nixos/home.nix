@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }: {
   home.username = "bt";
@@ -234,4 +235,8 @@
   };
 
   programs.home-manager.enable = true;
+    imports = [
+      inputs.nixmobar.homemodules.mainmodule
+      ./xmobar.nix
+    ];
 }
