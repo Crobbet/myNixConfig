@@ -67,7 +67,7 @@
 
         ({
           home-manager = {
-            extraSpecialArgs = {inherit inputs;};
+            extraSpecialArgs = {inherit inputs nixmobar;};
             users = {
             "bt" = import ./nixos/home.nix;
             };
