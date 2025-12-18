@@ -236,7 +236,7 @@
 
   programs.home-manager.enable = true;
     imports = [
-      inputs.nixmobar.homemodules.mainmodule
+      inputs.nixmobar.homeModules.mainmodule
       ./xmobar.nix
     ];
 }
