@@ -24,6 +24,9 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    nixmobar.url = "git+https://codeberg.org/xmobar/xmobar.git/?dir=nix";
+
 
 
   };
@@ -35,6 +38,7 @@
     stylix,
     xmonad,
     xmonad-contrib,
+    nixmobar,
     ...
   } @ inputs:
 
@@ -51,7 +55,7 @@
      };
 
     nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
+      specialArgs = {inherit inputs nixmobar;};
       modules = [
         stylix.nixosModules.stylix
         ./stylix.nix
