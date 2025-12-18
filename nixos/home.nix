@@ -233,10 +233,4 @@
   home.sessionVariables = {
     EDITOR = "hx";
   };
-
-  programs.home-manager.enable = true;
-    imports = [
-      inputs.nixmobar.homeModules.mainmodule
-      ./xmobar.nix
-    ];
 }

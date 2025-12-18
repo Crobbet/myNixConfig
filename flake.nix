@@ -38,7 +38,6 @@
     stylix,
     xmonad,
     xmonad-contrib,
-    nixmobar,
     ...
   } @ inputs:
 
@@ -55,7 +54,7 @@
      };
 
     nixosConfigurations.Winter = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs nixmobar;};
+      specialArgs = {inherit inputs;};
       modules = [
         stylix.nixosModules.stylix
         ./stylix.nix
@@ -67,7 +66,7 @@
 
         ({
           home-manager = {
-            extraSpecialArgs = {inherit inputs nixmobar;};
+            extraSpecialArgs = {inherit inputs;};
             users = {
             "bt" = import ./nixos/home.nix;
             };
