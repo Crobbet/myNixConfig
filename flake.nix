@@ -69,7 +69,7 @@
           home-manager = {
             extraSpecialArgs = {inherit inputs;};
             users = {
-            "bt" = import ./home.nix;
+            "bt" = import ./nixos/home.nix;
             };
           };
         })
