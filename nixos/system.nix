@@ -128,6 +128,14 @@
     };
   };
 
+#  systemd.services.my_erlang_session = {
+#   description = "Erlang Custom Session";
+#    wantedBy = [ "default.target" ]; 
+#    execStart = "bash erl -sname RainSession -setcookie mycookie -pa /home/bt/Desktop/erlang/Rain-Session-Manager -s main:main"; 
+#    restart = "always"; 
+#  };
+
+
   services = {
     syncthing = {
       enable = true;
